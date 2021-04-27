@@ -40,5 +40,43 @@ Completes [this](https://github.com/holbertonschool/0x00.py/blob/master/6-concat
 * You are not allowed to use any loops or conditional statements.
 * You have to use the variables `str1` and `str2` in your new line of code
 * Your program should be exactly 5 lines long
+## [7-edges.py](../0x00-python-hello_world/7-edges.py)
+Completes [this](https://github.com/holbertonschool/0x00.py/blob/master/7-edges.py) source code
+* You are not allowed to use any loops or conditional statements
+* Your program should be exactly 8 lines long
+* `word_first_3` should contain the first 3 letters of the variable word
+* `word_last_2` should contain the last 2 letters of the variable word
+* `middle_word` should contain the value of the variable word without the first and last letters
+## [8-concat_edges.py](../0x00-python-hello_world/8-concat_edges.py)
+Complete [this](https://github.com/holbertonschool/0x00.py/blob/master/8-concat_edges.py) source code to print object-oriented programming with Python, followed by a new line.
+* You are not allowed to use any loops or conditional statements
+* Your program should be exactly 5 lines long
+* You are not allowed to create new variables
+* You are not allowed to use string literals
+## [9-easter_egg.py](../0x00-python-hello_world/9-easter_egg.py)
+Python script that prints `“The Zen of Python”`, by TimPeters, followed by a new line.
+```
 
+The Zen of Python, by Tim Peters
 
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+
+```
