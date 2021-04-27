@@ -19,3 +19,9 @@ Topic's aim was to understand:-
 
 The following task files were used to complete the objective of the topic and help in grasping concepts
 ## [0-positive_or_negative.py](../0x01-python-if_else_loops_functions/0-positive_or_negative.py)
+This program will assign a random signed number to the variable `number` each time it is executed. Completes the [source code](https://alx-intranet.hbtn.io/rltoken/rkvoXPA-lS3TAaemM9sChg) in order to print whether the number stored in the variable `number` is positive or negative.
+* The variable number will store a different value every time you will run this program
+* You don’t have to understand what import, random. randint do. Please do not touch this code
+* The output of the program should be:
+
+* The number, followed by:
