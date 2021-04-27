@@ -15,7 +15,7 @@ Shell script that runs Python code with the Python code saved in the environment
 ## [2-print.py](../0x00-python-hello_world/2-print.py)
 Python script that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
 ## [3-print_number.py](../0x00-python-hello_world/3-print_number.py)
-You can find the source code [here](https://github.com/holbertonschool/0x00.py/blob/master/3-print_number.py)
+You can find the source code [here](https://github.com/holbertonschool/0x00.py/blob/master/3-print_number.py). 
 The output of the script should be:
 * the number, followed by Battery street,
 * followed by a new line
@@ -25,3 +25,19 @@ The output of the script should be:
 
 ## [4-print_float.py](../0x00-python-hello_world/4-print_float.py)
 Completes the [source code](https://github.com/holbertonschool/0x00.py/blob/master/4-print_float.py) in order to print the float stored in the variable number with a precision of 2 digits.
+## [5-print_string.py](../0x00-python-hello_world/5-print_string.py)
+Completes [this](https://github.com/holbertonschool/0x00.py/blob/master/5-print_string.py) source code in order to print 3 times a string stored in the variable str, followed by its first 9 characters.
+* The output of the program should be:
+* 3 times the value of str
+          * followed by a new line
+          * followed by the 9 first characters of str
+          * followed by a new line
+* You are not allowed to use any loops or conditional statement
+* Your program should be maximum 5 lines long
+## [6-concat.py](../0x00-python-hello_world/6-concat.py)
+Completes [this](https://github.com/holbertonschool/0x00.py/blob/master/6-concat.py) source code to print `Welcome to Holberton School!`
+* You are not allowed to use any loops or conditional statements.
+* You have to use the variables `str1` and `str2` in your new line of code
+* Your program should be exactly 5 lines long
+
+
