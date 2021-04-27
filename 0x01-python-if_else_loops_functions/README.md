@@ -88,3 +88,27 @@ Program that prints all possible different combinations of two digits.
 * You can only use no more than 2 `loops` in your code
 * You are not allowed to store numbers or strings in a variable
 * You are not allowed to import any module
+## [7-islower.py](../0x01-python-if_else_loops_functions/7-islower.py)
+Function that checks for lowercase character.
+* Prototype: `def islower(c):`
+* Returns `True` if `c` is lowercase
+* Returns `False` otherwise
+* You are not allowed to import any module
+* You are not allowed to use `str.upper()` and `str.isupper()`
+
+## [8-uppercase.py](../0x01-python-if_else_loops_functions/8-uppercase.py)
+Function that prints a string in uppercase followed by a new line.
+* Prototype: `def uppercase(str):`
+* You can only use no more than 2 `print` functions with string format
+* You can only use one loop in your code
+* You are not allowed to import any module
+* You are not allowed to use `str.upper()` and `str.isupper()`
+
+## [9-print_last_digit.py](../0x01-python-if_else_loops_functions/9-print_last_digit.py)
+Function that prints the last digit of a number.
+* Prototype: `def print_last_digit(number)`:
+* Returns the value of the last digit
+* You are not allowed to import any module
+
+## [10-add.py](../0x01-python-if_else_loops_functions/10-add.py)
+Function that adds two integers and returns the result.
