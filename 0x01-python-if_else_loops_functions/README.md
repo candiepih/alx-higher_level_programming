@@ -112,3 +112,23 @@ Function that prints the last digit of a number.
 
 ## [10-add.py](../0x01-python-if_else_loops_functions/10-add.py)
 Function that adds two integers and returns the result.
+* Prototype: `def add(a, b):`
+* Returns the value of `a + b`
+
+## [11-pow.py](../0x01-python-if_else_loops_functions/11-pow.py)
+Function that computes a to the power of b and return the value.
+* Prototype: `def pow(a, b):`
+* Returns the value of `a ^ b`
+
+## [12-fizzbuzz.py](../0x01-python-if_else_loops_functions/12-fizzbuzz.py)
+Function that prints the numbers from 1 to 100 separated by a space.
+* For multiples of three print `Fizz` instead of the number and for multiples of five print `Buzz`.
+* For numbers which are multiples of both three and five print `FizzBuzz`.
+* Prototype: `def fizzbuzz():`
+* Each element should be followed by a space
+* You are not allowed to import any module
+
+## [13-insert_number.c](../0x01-python-if_else_loops_functions/13-insert_number.c)
+Function in C that inserts a number into a sorted singly linked list.
+* Prototype: `listint_t *insert_node(listint_t **head, int number);`
+* Return: the address of the new node, or `NULL` if it failed
