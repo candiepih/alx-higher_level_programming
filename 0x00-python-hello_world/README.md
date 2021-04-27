@@ -85,7 +85,7 @@ Function in C that checks if a singly linked list has a cycle in it.
 * Prototype: int check_cycle(listint_t *list);
 * Returns: `0` if there is no cycle, `1` if there is a cycle
 
-# Here is how a visual of how i handled it
+Here is how a visual of how i handled it
 ![sketch](https://user-images.githubusercontent.com/44834632/116272335-7f1e9180-a789-11eb-994b-be1999aefb38.png)
 
 
