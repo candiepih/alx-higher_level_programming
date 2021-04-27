@@ -80,3 +80,15 @@ If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 
 ```
+## [10-check_cycle.c](../0x00-python-hello_world/10-check_cycle.c)
+Function in C that checks if a singly linked list has a cycle in it.
+* Prototype: int check_cycle(listint_t *list);
+* Returns: `0` if there is no cycle, `1` if there is a cycle
+
+# Here is how a visual of how i handled it
+![sketch](https://user-images.githubusercontent.com/44834632/116272335-7f1e9180-a789-11eb-994b-be1999aefb38.png)
+
+
+## [lists.h](../0x00-python-hello_world/lists.h)
+Contains function prototypes and list data structure
+## [lists.h](../0x00-python-hello_world/lists.h)
