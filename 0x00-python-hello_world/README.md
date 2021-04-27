@@ -16,7 +16,7 @@ Shell script that runs Python code with the Python code saved in the environment
 Python script that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
 ## [3-print_number.py](../0x00-python-hello_world/3-print_number.py)
 * You can find the source code [here](https://github.com/holbertonschool/0x00.py/blob/master/3-print_number.py)
-* The output of the script should be:
+The output of the script should be:
          * the number, followed by Battery street,
          * followed by a new line
          * You are not allowed to cast the variable number into a string
