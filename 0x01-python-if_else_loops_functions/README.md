@@ -132,3 +132,7 @@ Function that prints the numbers from 1 to 100 separated by a space.
 Function in C that inserts a number into a sorted singly linked list.
 * Prototype: `listint_t *insert_node(listint_t **head, int number);`
 * Return: the address of the new node, or `NULL` if it failed
+
+Here is a sketch of the task handling
+![sketch2](https://user-images.githubusercontent.com/44834632/116280443-57cbc280-a791-11eb-851c-f4cf85fe4255.png)
+
