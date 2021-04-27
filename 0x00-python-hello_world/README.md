@@ -85,10 +85,17 @@ Function in C that checks if a singly linked list has a cycle in it.
 * Prototype: int check_cycle(listint_t *list);
 * Returns: `0` if there is no cycle, `1` if there is a cycle
 
-Here is how a visual of how i handled it
+Using floyd's cycle finding algorithm here is a sketch of how I implemented it. 
 ![sketch](https://user-images.githubusercontent.com/44834632/116272335-7f1e9180-a789-11eb-994b-be1999aefb38.png)
 
 
 ## [lists.h](../0x00-python-hello_world/lists.h)
 Contains function prototypes and list data structure
-## [lists.h](../0x00-python-hello_world/lists.h)
+## [100-write.py](../0x00-python-hello_world/100-write.py)
+Python script that prints exactly `and that piece of art is useful - Dora Korpar, 2015-10-19`, followed by a new line.
+* Use of `write` from the `sys` module is allowed
+* You are not allowed to use `print`
+* Your script should print to `stderr`
+* Your script should exit with the status code `1`
+## [101-compile](../0x00-python-hello_world/101-compile)
+Script that compiles a Python script file. The Python file name is stored in the environment variable `$PYFILE` and the output filename has to be `$PYFILEc` (ex: `export PYFILE=my_main.py` => output filename: `my_main.pyc`)
