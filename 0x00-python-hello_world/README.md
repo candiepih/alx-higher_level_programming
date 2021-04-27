@@ -15,13 +15,13 @@ Shell script that runs Python code with the Python code saved in the environment
 ## [2-print.py](../0x00-python-hello_world/2-print.py)
 Python script that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
 ## [3-print_number.py](../0x00-python-hello_world/3-print_number.py)
-* You can find the source code [here](https://github.com/holbertonschool/0x00.py/blob/master/3-print_number.py)
+You can find the source code [here](https://github.com/holbertonschool/0x00.py/blob/master/3-print_number.py)
 The output of the script should be:
-         * the number, followed by Battery street,
-         * followed by a new line
-         * You are not allowed to cast the variable number into a string
-         * Your code must be 3 lines long
-         * You have to use the new print numbers tips (with .format(...))
+* the number, followed by Battery street,
+* followed by a new line
+* You are not allowed to cast the variable number into a string
+* Your code must be 3 lines long
+* You have to use the new print numbers tips (with .format(...))
 
 ## [4-print_float.py](../0x00-python-hello_world/4-print_float.py)
 Completes the [source code](https://github.com/holbertonschool/0x00.py/blob/master/4-print_float.py) in order to print the float stored in the variable number with a precision of 2 digits.
