@@ -8,7 +8,7 @@ Guido van Rossum was a Dutch programmer who created the Python programming langu
 * What are indexing and slicing in Python
 * What is the official Holberton Python coding style and how to check your code with PEP 8
 Below task files were used to achieve learning objectives and grasp concepts.
-## 0-run
+## [0-run]
 Shell script that runs a Python script with the Python file name saved in the environment variable `$PYFILE`
 ## 1-run_inline
 Shell script that runs Python code with the Python code saved in the environment variable `$PYCODE`
