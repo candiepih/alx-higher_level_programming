@@ -136,3 +136,16 @@ Function in C that inserts a number into a sorted singly linked list.
 Here is a sketch of how handling of the task works
 ![sketch2](https://user-images.githubusercontent.com/44834632/116280443-57cbc280-a791-11eb-851c-f4cf85fe4255.png)
 
+## [lists.h](../0x01-python-if_else_loops_functions/lists.h)
+Contains function prototypes and data structure `listint_t`
+## [100-print_tebahpla.py](../0x01-python-if_else_loops_functions/100-print_tebahpla.py)
+Program that prints the ASCII alphabet, in reverse order, alternating lowercase and uppercase (`z` in lowercase and `Y` in uppercase) , not followed by a new line.
+* You can only use one `print` function with string format
+* You can only use one loop in your code
+* You are not allowed to store characters in a variable
+* You are not allowed to import any module
+
+## [101-remove_char_at.py](../0x01-python-if_else_loops_functions/101-remove_char_at.py)
+Function that creates a copy of the string, removing the character at the position `n` (not the Python way, the “C array index”).
+* Prototype: `def remove_char_at(str, n):`
+* You are not allowed to import any module
