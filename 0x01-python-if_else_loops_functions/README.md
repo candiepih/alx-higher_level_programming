@@ -43,3 +43,48 @@ The output of the program should be:
      * if the last digit is greater than 5: the string and is greater than 5
      * if the last digit is 0: the string and is 0
      * if the last digit is less than 6 and not 0: the string and is less than 6 and not 0
+
+## [2-print_alphabet.py](../0x01-python-if_else_loops_functions/2-print_alphabet.py)
+Program that prints the ASCII alphabet, in lowercase, not followed by a new line.
+* You can only use one `print` function with string format
+* You can only use one loop in your code
+* You are not allowed to store characters in a variable
+* You are not allowed to import any module
+
+## [3-print_alphabt.py](../0x01-python-if_else_loops_functions/3-print_alphabt.py)
+Program that prints the ASCII alphabet, in lowercase, not followed by a new line.
+* Print all the letters except `q` and `e`
+* You can only use one `print` function with string format
+* You can only use one loop in your code
+* You are not allowed to store characters in a variable
+* You are not allowed to import any module
+
+## [4-print_hexa.py](../0x01-python-if_else_loops_functions/4-print_hexa.py)
+Program that prints all numbers from `0` to `98` in decimal and in hexadecimal (as in the following example)
+* You can only use one `print` function with string format
+* You can only use one loop in your code
+* You are not allowed to store numbers or strings in a variable
+* You are not allowed to import any module
+
+## [5-print_comb2.py](../0x01-python-if_else_loops_functions/5-print_comb2.py)
+Program that prints numbers from 0 to 99.
+* Numbers must be separated by `,`, followed by a space
+* Numbers should be printed in ascending order, with two digits
+* The last number should be followed by a new line
+* You can only use no more than 2 `print` functions with string format
+* You can only use one loop in your code
+* You are not allowed to store numbers or strings in a variable
+* You are not allowed to import any module
+
+## [6-print_comb3.py](../0x01-python-if_else_loops_functions/6-print_comb3.py)
+Program that prints all possible different combinations of two digits.
+* Numbers must be separated by `,`, followed by a space
+* The two digits must be different
+* `01` and `10` are considered the same combination of the two digits `0` and `1`
+* Print only the smallest combination of two digits
+* Numbers should be printed in ascending order, with two digits
+* The last number should be followed by a new line
+* You can only use no more than 3 `print` functions with string format
+* You can only use no more than 2 `loops` in your code
+* You are not allowed to store numbers or strings in a variable
+* You are not allowed to import any module
