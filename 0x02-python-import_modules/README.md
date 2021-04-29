@@ -4,7 +4,9 @@ Simply, a `module` is a file consisting of Python code. A module can define func
 Program that imports the function def add(a, b): from other file and prints the result of the addition 1 + 2 = 3 with 1 and 2 stored in variables a and b
 ## [1-calculation.py](../0x02-python-import_modules/1-calculation.py)
 Program that imports functions from the file another file, does some Maths, and prints the result.
-```sh
+```python
+Content of file being imported
+
 candiepih@ubuntu:~/0x02$ cat calculator_1.py
 #!/usr/bin/python3
 def add(a, b):
