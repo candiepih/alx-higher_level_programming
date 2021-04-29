@@ -29,6 +29,7 @@ operators = [
     },
 ]
 
+
 def get_operator(operator):
     for operation in operators:
         if operation["sign"] == operator:
