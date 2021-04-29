@@ -77,3 +77,87 @@ def div(a, b):
     return int(a / b)
  
 ```
+## [2-args.py](../0x02-python-import_modules/2-args.py)
+Program that prints the number and the list of its arguments passed to the program
+## [3-infinite_add.py](../0x02-python-import_modules/3-infinite_add.py)
+Program that prints the result of the addition of all arguments passed to program assuming that all arguments can be casted into integers
+## [4-hidden_discovery.py](../0x02-python-import_modules/4-hidden_discovery.py)
+Program that prints all the names defined by the compiled module `hidden_4.pyc`.
+## [5-variable_load.py](../0x02-python-import_modules/5-variable_load.py)
+Program that imports the variable `a` from the file `variable_load_5.py` and prints its value. Contents of `variable_load_5.py` are:-
+
+```python
+candiepih@ubuntu:~/0x02$ cat variable_load_5.py
+
+#!/usr/bin/python3
+a = 98
+"""Simple variable
+"""
+```
+
+## [100-my_calculator.py](../0x02-python-import_modules/100-my_calculator.py)
+Program that imports all functions from the file `calculator_1.py` and handles basic operations.
+* Usage: `./100-my_calculator.py a operator b`
+* You can cast `a` and `b` into integers by using `int()` (assuming that all arguments will be castable into integers)
+
+operator can be:
+* + for addition
+* - for subtraction
+* * for multiplication
+* / for division
+Contents of file `calculator_1.py` are:-
+
+```python
+
+def add(a, b):
+    """My addition function
+
+    Args:
+        a: first integer
+        b: second integer
+
+    Returns:
+        The return value. a + b
+    """
+    return (a + b)
+
+
+def sub(a, b):
+    """My subtraction function
+
+    Args:
+        a: first integer
+        b: second integer
+
+    Returns:
+        The return value. a - b
+    """
+    return (a - b)
+
+
+def mul(a, b):
+    """My multiplication function
+
+    Args:
+        a: first integer
+        b: second integer
+
+    Returns:
+        The return value. a * b
+    """
+    return (a * b)
+
+
+def div(a, b):
+    """My division function
+
+    Args:
+        a: first integer
+        b: second integer
+
+    Returns:
+        The return value. a / b
+    """
+    return int(a / b)
+
+```
