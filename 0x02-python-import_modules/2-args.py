@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import sys.argv as argv
+from sys import argv
 
 if __name__ == "__main__":
     pass
