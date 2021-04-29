@@ -155,3 +155,7 @@ def div(a, b):
     return int(a / b)
 
 ```
+## [101-easy_print.py](../0x02-python-import_modules/101-easy_print.py)
+Program that prints `#pythoniscool`, followed by a new line, in the standard output without using `print` or `eval` or `open` or `import sys`
+## [103-fast_alphabet.py](../0x02-python-import_modules/103-fast_alphabet.py)
+program that prints the alphabet in uppercase, followed by a new line without use of any loops, conditional statements, str.join(), string literal or system calls.
