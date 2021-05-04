@@ -68,7 +68,7 @@ int is_palindrome(listint_t **head)
 		return (0);
 
 	length = list_length(head);
-	if (length == 1)
+	if (length == 1 || length == 0)
 		return (1);
 
 	tmp = *head;
