@@ -65,10 +65,10 @@ int is_palindrome(listint_t **head)
 	int track_index = 0;
 
 	if (!*head || !head)
-		return (0);
+		return (1);
 
 	length = list_length(head);
-	if (length == 1 || length == 0)
+	if (length == 1)
 		return (1);
 
 	tmp = *head;
