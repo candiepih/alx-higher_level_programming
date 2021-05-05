@@ -1,53 +1,29 @@
 #include "lists.h"
 
 /**
- * list_length - gets the total number of nodes in a linked list
- * @h: beginning of listint_t linked list
- * Return: total nodes in linked list
+ * is_palindrome_util - uses recursion to and use function call stack to
+ * determine value at head and value at last node
+ * @left: pointer to the begining of the linked list
+ * @right: the last most node in the linked list
+ * Return: (1) on success (0) on failure
  */
 
-int list_length(listint_t **h)
+int is_palindrome_util(listint_t **left, listint_t *right)
 {
-	listint_t *tmp = *h;
-	int i = 0;
+	int isp, isp1;
 
-	while (tmp)
-	{
-		i++;
-		tmp = tmp->next;
-	}
+	if (!right)
+		return (1);
 
-	return (i);
-}
+	isp = is_palindrome_util(left, right->next);
 
-/**
- * get_nodeint_at_index - finds the nth node of a listint_t linked list.
- * @head: head of a listint_t linked list.
- * @index: index of the node finding starting from 0
- * Return: found node
- */
+	if (isp == 0)
+        	return (0);
 
-listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
-{
-	listint_t *tmp = head;
-	listint_t *node_found = NULL;
-	int i = 0;
+	isp1 = (right->n == (*left)->n);
+	*left = (*left)->next;
 
-	while (tmp)
-	{
-		if (i == ((int)index))
-		{
-			node_found = tmp;
-			break;
-		}
-		tmp = tmp->next;
-		i++;
-	}
-
-	if (!node_found)
-		return (NULL);
-
-	return (node_found);
+	return (isp1);
 }
 
 /**
@@ -60,26 +36,5 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *p1, *p2, *tmp;
-	int length;
-	int track_index = 0;
-
-	if (!*head || !head)
-		return (1);
-
-	length = list_length(head);
-	if (length == 1)
-		return (1);
-
-	tmp = *head;
-	while (tmp)
-	{
-		p1 = tmp;
-		p2 = get_nodeint_at_index(*head, ((length - 1) - track_index));
-		if (p1->n != p2->n)
-			return (0);
-		track_index++;
-		tmp = tmp->next;
-	}
-	return (1);
+	return (is_palindrome_util(head, *head));
 }
