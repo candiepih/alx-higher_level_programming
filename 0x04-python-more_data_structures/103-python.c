@@ -46,19 +46,21 @@ void print_python_bytes(PyObject *p)
 	else
 	{
 		s = PyBytes_AS_STRING(p);
-		printf("size: %ld\n", PyBytes_Size(p));
+		printf("size: %zd\n", PyBytes_Size(p));
 		printf("trying string: %s\n", s);
 
 		if (PyBytes_Size(p) > 10)
 		{
 			printf("first 10 bytes: ");
 			for (i = 0; i < 10; i++)
-				printf("%c", s[i]);
-			printf("\n");
+				printf("%x", s[i]);
 		}
 		else
 		{
-			printf("first %ld bytes: %s\n", PyBytes_Size(p), s);
+			printf("first %zd bytes: ", PyBytes_Size(p));
+			for (i = 0; s[i] != '\0'; i++)
+				printf("%x", s[i]);
 		}
+		printf("\n");
 	}
 }
