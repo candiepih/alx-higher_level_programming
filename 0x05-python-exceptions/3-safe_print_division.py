@@ -7,5 +7,5 @@ def safe_print_division(a, b):
         result = 0
     finally:
         result = None if result == 0 else result
-        print("Inside result: {}".format(new_result))
+        print("Inside result: {}".format(result))
     return result
