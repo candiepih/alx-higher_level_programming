@@ -11,6 +11,8 @@ This topic's aim was understanding the following:-
 
 I understood that an `Error` indicates serious problems that a reasonable application should not try to catch while an `Exception` indicates conditions that a reasonable application might want to catch. Below task files helped in understanding various concepts of the topic.
 
+# FILES
+
 [0-safe_print_list.py](../0x05-python-exceptions/0-safe_print_list.py)
 
 Prototype: `def safe_print_list(my_list=[], x=0):`
