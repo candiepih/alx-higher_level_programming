@@ -6,6 +6,6 @@ def safe_print_division(a, b):
     except ZeroDivisionError:
         result = 0
     finally:
-        new_result = None if not result else result
+        new_result = None if result == 0 else result
         print("Inside result: {}".format(new_result))
-        return new_result
+    return new_result
