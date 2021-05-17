@@ -62,3 +62,9 @@ Prototype: `def safe_print_integer_err(value):`
 
 A function that prints an integer. `value` can be any type (integer, string, etc). Returns `True` if value has been correctly printed (it means the value is an integer)
 Otherwise, returns `False` and prints in `stderr` the error precede by `Exception: `
+
+[101-safe_function.py](../0x05-python-exceptions/101-safe_function.py)
+
+Prototype: `def safe_function(fct, *args):`
+
+Assuming fct will be always a pointer to a function returns the result of the function, otherwise, returns `None` if something happens during the function and prints in `stderr` the error precede by `Exception: `
