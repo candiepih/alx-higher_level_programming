@@ -57,10 +57,14 @@ class Node:
 
 
 class SinglyLinkedList:
+    """Defines implementation of a singly linked list"""
+
     def __init__(self):
+        """Initializes instance data"""
         self.__head = None
 
     def __str__(self):
+	"""Prints the entire list in stdout"""
         head = self.__head
         values = []
         while head != None:
@@ -69,6 +73,10 @@ class SinglyLinkedList:
         return "\n".join(values)
 
     def sorted_insert(self, value):
+        """Inserts a new Node into the list
+        Args:
+            value (int): integer to assign to `data` of Node object
+	"""
         head = self.__head
         if head == None or (head != None and head.data >= value):
             new_node = Node(value, head)
