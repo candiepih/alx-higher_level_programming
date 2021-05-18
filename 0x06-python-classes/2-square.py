@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Represent a square class"""
 
 
 class Square:
