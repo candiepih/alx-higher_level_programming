@@ -67,13 +67,12 @@ class Square:
                        elements or has negative integers
         """
 
-        if not isinstance(value, tuple):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif len(value) != 2 or not all(isinstance(v, int) for v in value):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif not all(num >= 0 for num in value):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value
+        if isinstance(value, tuple) and len(value) == 2:
+                if isinstance(value[0], int) and isinstance(value[1], int):
+                    if value[0] >= 0 and value[1] >= 0:
+                        self.__position = value
+                        return
+        raise TypeError("position must be a tuple of 2 positive integers")
 
     def my_print(self):
         """Prints a square to stdout using #"""
