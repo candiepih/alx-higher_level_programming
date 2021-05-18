@@ -10,14 +10,17 @@ class Node:
         Args:
             data (int): value to be assigned to `data`
             next_node (Node): object of type Node
-        
+        Raises:
+	    TypeError: `data` isn't an integer or `next_node` not a
+	                node object
         """
-		    if not isinstance(data, int):
-			    raise TypeError("data must be an integer")
-		    if not isinstance(next_node, Node) and next_node != None:
-			    raise TypeError("next_node must be a Node object")
-		    self.__data = data
-		    self.__next_node = next_node
+
+        if not isinstance(data, int):
+	    raise TypeError("data must be an integer")
+        if not isinstance(next_node, Node) and next_node != None:
+	    raise TypeError("next_node must be a Node object")
+        self.__data = data
+        self.__next_node = next_node
 
     @property
     def data(self):
