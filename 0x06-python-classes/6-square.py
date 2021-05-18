@@ -64,15 +64,15 @@ class Square:
             value (int): value to be set to `position` attribute
         Raise:
             TypeError: position isn't a tupple or doesn't contain 2
-                       elements or has negative integers
         """
 
-        if isinstance(value, tuple) and len(value) == 2:
-                if isinstance(value[0], int) and isinstance(value[1], int):
-                    if value[0] >= 0 and value[1] >= 0:
-                        self.__position = value
-                        return
-        raise TypeError("position must be a tuple of 2 positive integers")
+        if not isinstance(value, tuple):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if len(value) != 2 or not all(isinstance(v, int) for v in value):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if not all(num >= 0 for num in value):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
 
     def my_print(self):
         """Prints a square to stdout using #"""
