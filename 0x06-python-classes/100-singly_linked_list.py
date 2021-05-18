@@ -14,7 +14,6 @@ class Node:
 	    TypeError: `data` isn't an integer or `next_node` not a
 	                node object
         """
-
         if not isinstance(data, int):
 	    raise TypeError("data must be an integer")
         if not isinstance(next_node, Node) and next_node != None:
@@ -24,20 +23,34 @@ class Node:
 
     @property
     def data(self):
+        """retrieves value of data attribute"""
         return self.__data
 
     @data.setter
     def data(self, value):
+        """Sets a new value to `data` attribute
+        Args:
+            value (int): number to assign to `data`
+        Raises:
+            TypeError: if data isn't an integer
+	"""
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
 	self.__data = value
 
     @property
     def next_node(self):
+        """retrieves value of `next_node`"""
         return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
+	"""Sets a new value to `next_node`
+        Args:
+            value (Node): object of Noden to assign to `next_node`
+        Raises:
+            TypeError: if value is not a Node object
+	"""
         if not isinstance(value, Node) and value != None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
