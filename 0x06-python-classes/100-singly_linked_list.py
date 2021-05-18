@@ -29,18 +29,18 @@ class Node:
     @data.setter
     def data(self, value):
         if not isinstance(value, int):
-			      raise TypeError("data must be an integer")
-        self.__data = value
+            raise TypeError("data must be an integer")
+	self.__data = value
 
-	  @property
-	  def next_node(self):
-		    return self.__next_node
+    @property
+    def next_node(self):
+        return self.__next_node
 
-	  @next_node.setter
+    @next_node.setter
     def next_node(self, value):
-		    if not isinstance(value, Node) and value != None:
-		        raise TypeError("next_node must be a Node object")
-		    self.__next_node = value
+        if not isinstance(value, Node) and value != None:
+            raise TypeError("next_node must be a Node object")
+        self.__next_node = value
 
 
 class SinglyLinkedList:
@@ -48,23 +48,23 @@ class SinglyLinkedList:
         self.__head = None
 
     def __str__(self):
-		    head = self.__head
-		    values = []
-		    while head != None:
-			      values.append("{}".format(head.data))
-			      head = head.next_node
-		    return "\n".join(values)
+        head = self.__head
+        values = []
+        while head != None:
+            values.append("{}".format(head.data))
+            head = head.next_node
+        return "\n".join(values)
 
     def sorted_insert(self, value):
-		    head = self.__head
-		    if head == None or (head != None and head.data >= value):
-			      new_node = Node(value, head)
-			      self.__head = new_node
-			      return
-		    while head != None:
-			      next_node = head.next_node
-			      if next_node == None or next_node.data >= value:
-				        new_node = Node(value, next_node)
-				        head.next_node = new_node
-				        break
+        head = self.__head
+        if head == None or (head != None and head.data >= value):
+            new_node = Node(value, head)
+            self.__head = new_node
+            return
+        while head != None:
+            next_node = head.next_node
+            if next_node == None or next_node.data >= value:
+                new_node = Node(value, next_node)
+                head.next_node = new_node
+                break
             head = next_node
