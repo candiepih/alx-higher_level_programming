@@ -41,8 +41,7 @@ class Square:
                 square.append(" ")
             for k in range(self.__size):
                 square.append("#")
-            if i < (self.__size - 1):
-                square.append("\n")
+            square.append("\n")
         return "".join(square)
 
     def area(self):
