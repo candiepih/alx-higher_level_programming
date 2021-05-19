@@ -33,7 +33,7 @@ class Square:
         """Prints a square to stdout using `#`"""
         square = []
         if self.__size == 0:
-            return "\n"
+            return ""
 
         [square.append("\n") for i in range(self.position[1])]
         for i in range(self.__size):
@@ -41,7 +41,8 @@ class Square:
                 square.append(" ")
             for k in range(self.__size):
                 square.append("#")
-            square.append("\n")
+            if i < (self.__size - 1):
+                square.append("\n")
         return "".join(square)
 
     def area(self):
