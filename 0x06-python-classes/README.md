@@ -38,16 +38,39 @@ Class `Square` that defines a square by: based on [0-square.py](../0x06-python-c
 Class `Square` that defines a square by: based on [1-square.py](../0x06-python-classes/1-square.py)
 * Private instance attribute: `size`
 * Instantiation with optional size: `def __init__(self, size=0):`
+
+
           * `size` must be an integer, otherwise raises a `TypeError` exception with the message `size must be an integer`
           * if `size` is less than `0`, raises a `ValueError` exception with the message `size must be >= 0`
 
 [3-square.py](../0x06-python-classes/3-square.py)
 
 Class `Square` that defines a square by: based on [2-square.py](../0x06-python-classes/2-square.py)
-* Private instance attribute: `size`
-* Instantiation with optional size: `def __init__(self, size=0):`
-          
-          * `size` must be an integer, otherwise raises a `TypeError` exception with the message `size must be an integer`
-          * if `size` is less than `0`, raises a `ValueError` exception with the message `size must be >= 0`
 
 * Public instance method: `def area(self):` that returns the current square area
+
+[4-square.py](../0x06-python-classes/4-square.py)
+
+Class `Square` that defines a square by: based on [3-square.py](../0x06-python-classes/3-square.py)
+* Instantiation with optional `size: def __init__(self, size=0):`
+
+[5-square.py](../0x06-python-classes/5-square.py)
+
+Class `Square` that defines a square by: based on [4-square.py](../0x06-python-classes/4-square.py)
+* Public instance method: `def my_print(self):` that prints in stdout the square with the character `#`:
+* if `size` is equal to 0, print an empty line
+
+[6-square.py](../0x06-python-classes/6-square.py)
+
+Class `Square` that defines a square by: based on [5-square.py](../0x06-python-classes/5-square.py)
+* Private instance attribute: `position:`
+
+       * property `def position(self):` to retrieve it
+       * property setter `def position(self, value):` to set it:
+       * `position` must be a tuple of 2 positive integers, otherwise raise a `TypeError` exception with the message `position must be a tuple of 2 positive integers`
+
+* Instantiation with optional size and optional `position: def __init__(self, size=0, position=(0, 0)):`
+* Public instance method: `def my_print(self):` that prints in stdout the square with the character `#`:
+
+         * if size is equal to 0, print an empty line
+         * `position` should be use by using space - `Don’t fill lines by spaces` when `position[1] > 0`
