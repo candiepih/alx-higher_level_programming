@@ -38,7 +38,6 @@ Class `Square` that defines a square by: based on [0-square.py](../0x06-python-c
 Class `Square` that defines a square by: based on [1-square.py](../0x06-python-classes/1-square.py)
 * Private instance attribute: `size`
 * Instantiation with optional size: `def __init__(self, size=0):`
-          
           * `size` must be an integer, otherwise raises a `TypeError` exception with the message `size must be an integer`
           * if `size` is less than `0`, raises a `ValueError` exception with the message `size must be >= 0`
 
