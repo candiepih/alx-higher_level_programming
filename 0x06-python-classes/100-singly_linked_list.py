@@ -11,13 +11,13 @@ class Node:
             data (int): value to be assigned to `data`
             next_node (Node): object of type Node
         Raises:
-	    TypeError: `data` isn't an integer or `next_node` not a
-	                node object
+            TypeError: `data` isn't an integer or `next_node` not a
+                        node object
         """
         if not isinstance(data, int):
-	    raise TypeError("data must be an integer")
-        if not isinstance(next_node, Node) and next_node != None:
-	    raise TypeError("next_node must be a Node object")
+            raise TypeError("data must be an integer")
+        if not isinstance(next_node, Node) and next_node is not None:
+            raise TypeError("next_node must be a Node object")
         self.__data = data
         self.__next_node = next_node
 
@@ -33,10 +33,10 @@ class Node:
             value (int): number to assign to `data`
         Raises:
             TypeError: if data isn't an integer
-	"""
+        """
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
-	self.__data = value
+        self.__data = value
 
     @property
     def next_node(self):
@@ -45,13 +45,13 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
-	"""Sets a new value to `next_node`
+        """Sets a new value to `next_node`
         Args:
             value (Node): object of Noden to assign to `next_node`
         Raises:
             TypeError: if value is not a Node object
-	"""
-        if not isinstance(value, Node) and value != None:
+        """
+        if not isinstance(value, Node) and value is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
@@ -64,10 +64,10 @@ class SinglyLinkedList:
         self.__head = None
 
     def __str__(self):
-	"""Prints the entire list in stdout"""
+        """Prints the entire list in stdout"""
         head = self.__head
         values = []
-        while head != None:
+        while head is not None:
             values.append("{}".format(head.data))
             head = head.next_node
         return "\n".join(values)
@@ -76,15 +76,15 @@ class SinglyLinkedList:
         """Inserts a new Node into the list
         Args:
             value (int): integer to assign to `data` of Node object
-	"""
+        """
         head = self.__head
-        if head == None or (head != None and head.data >= value):
+        if head is None or (head is not None and head.data >= value):
             new_node = Node(value, head)
             self.__head = new_node
             return
-        while head != None:
+        while head is not None:
             next_node = head.next_node
-            if next_node == None or next_node.data >= value:
+            if next_node is None or next_node.data >= value:
                 new_node = Node(value, next_node)
                 head.next_node = new_node
                 break
