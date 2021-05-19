@@ -104,3 +104,14 @@ Class `SinglyLinkedList` that defines a singly linked list by:
       * one node number by line
 
 * Public instance method: `def sorted_insert(self, value):` that inserts a new `Node` into the correct sorted position in the list (increasing order)
+
+[101-square.py](../0x06-python-classes/101-square.py)
+
+Class `Square` that defines a square by: based on [6-square.py](../0x06-python-classes/6-square.py)
+* Printing a `Square` instance should have the same behavior as `my_print()` method
+
+
+[102-square.py](../0x06-python-classes/102-square.py)
+
+Class `Square` that defines a square by: based on [4-square.py](../0x06-python-classes/4-square.py)
+* `Square` instance can answer to comparators: `==, !=, >, >=, <` and `<=` based on the square area
