@@ -28,3 +28,27 @@ Topic's aim was to understand more about classes and also understand the followi
 * How to use the getattr function
 
 The below task files were used to test my understanding on various concept on the topic.
+
+The following files are used to create a single class based on the following attributes and methods:-
+
+    Contains class `Rectangle` with:-
+
+    Private instance attribute: `width`
+    property setter `def width(self, value):` to set it
+
+    Private instance attribute: `height`
+    property setter `def height(self, value):` to set it
+
+    Public instance method: `def area(self):` that returns the rectangle area
+    Public instance method: `def perimeter(self):` that returns the rectangle perimeter
+
+    `print()` and `str()` should print the rectangle with the character `#`
+    `repr()` should return a string representation of the rectangle to be able to recreate a new instance by using `eval()`
+
+    Public class attribute `number_of_instances`
+    Public class attribute `print_symbol`
+
+    Static method `def bigger_or_equal(rect_1, rect_2):`  that returns the biggest rectangle based on the area
+    Class method `def square(cls, size=0):` that returns a new Rectangle instance with `width == height == size`
+
+    and instantiation as `def __init__(self, width=0, height=0):`
