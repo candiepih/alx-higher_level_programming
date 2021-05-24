@@ -87,3 +87,40 @@ adds the following based on [1-rectangle.py](../0x08-python-more_classes/1-recta
 adds the following based on [2-rectangle.py](../0x08-python-more_classes/2-rectangle.py)
 
 * `print()` and `str()` should print the rectangle with the character `#`
+
+[4-rectangle.py](../0x08-python-more_classes/4-rectangle.py)
+
+adds the following based on [3-rectangle.py](../0x08-python-more_classes/3-rectangle.py)
+
+* `repr()` should return a string representation of the rectangle to be able to recreate a new instance by using `eval()`
+
+[5-rectangle.py](../0x08-python-more_classes/5-rectangle.py)
+
+adds the following based on [4-rectangle.py](../0x08-python-more_classes/4-rectangle.py)
+
+* Print the message Bye `rectangle...` (`...` being 3 dots not ellipsis) when an instance of `Rectangle` is deleted
+
+[6-rectangle.py](../0x08-python-more_classes/6-rectangle.py)
+
+adds the following based on [5-rectangle.py](../0x08-python-more_classes/5-rectangle.py)
+
+* Public class attribute `number_of_instances` used to count instances, decrements on deletion and increments on addition
+
+[7-rectangle.py](../0x08-python-more_classes/7-rectangle.py)
+
+adds the following based on [6-rectangle.py](../0x08-python-more_classes/6-rectangle.py)
+
+* Public class attribute `print_symbol` that changes `#` to print something else instead
+
+
+[8-rectangle.py](../0x08-python-more_classes/8-rectangle.py)
+
+adds the following based on [7-rectangle.py](../0x08-python-more_classes/7-rectangle.py)
+
+Static method `def bigger_or_equal(rect_1, rect_2):` that returns the biggest rectangle based on the area
+
+[9-rectangle.py](../0x08-python-more_classes/9-rectangle.py)
+
+adds the following based on [8-rectangle.py](../0x08-python-more_classes/8-rectangle.py)
+
+Class method `def square(cls, size=0):` that returns a new Rectangle instance with `width == height == size`
