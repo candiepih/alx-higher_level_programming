@@ -52,3 +52,38 @@ The following files are used to create a single class based on the following att
     Class method `def square(cls, size=0):` that returns a new Rectangle instance with `width == height == size`
 
     and instantiation as `def __init__(self, width=0, height=0):`
+
+# Files
+
+[0-rectangle.py](../0x08-python-more_classes/0-rectangle.py)
+
+Creates an empty class Rectangle that defines a rectangle:
+
+[1-rectangle.py](../0x08-python-more_classes/1-rectangle.py)
+
+adds the following based on [0-rectangle.py](../0x08-python-more_classes/0-rectangle.py)
+
+width:
+
+* Private instance attribute: `width`:
+* property `def width(self):` to retrieve it
+* property setter `def width(self, value):` to set it:
+
+height:
+
+* Private instance attribute: `height`:
+* property `def height(self):` to retrieve it
+* property setter `def height(self, value):` to set it:
+
+[2-rectangle.py](../0x08-python-more_classes/2-rectangle.py)
+
+adds the following based on [1-rectangle.py](../0x08-python-more_classes/1-rectangle.py)
+
+* Public instance method: `def area(self):` that returns the rectangle area
+* Public instance method: `def perimeter(self):` that returns the rectangle perimeter
+
+[3-rectangle.py](../0x08-python-more_classes/3-rectangle.py)
+
+adds the following based on [2-rectangle.py](../0x08-python-more_classes/2-rectangle.py)
+
+* `print()` and `str()` should print the rectangle with the character `#`
