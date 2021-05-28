@@ -27,4 +27,4 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
 
     return list(map(lambda row: list(map(lambda v:
-                    float("{0:.2f}".format(v/div)), row)), matrix))
+                    round(v/div, 2), row)), matrix))
