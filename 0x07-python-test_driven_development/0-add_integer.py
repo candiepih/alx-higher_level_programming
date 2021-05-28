@@ -8,9 +8,9 @@
 def add_integer(a, b=98):
     """Calculates sum of two integers"""
 
-    if not isinstance(a, (int, float)):
+    if not isinstance(a, (int, float)) or NaN:
         raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)):
+    if not isinstance(b, (int, float)) or NaN:
         raise TypeError("b must be an integer")
 
     a = int(a) if isinstance(a, float) else a
