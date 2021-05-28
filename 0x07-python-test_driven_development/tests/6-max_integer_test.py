@@ -30,3 +30,11 @@ class TestMaxInteger(unittest.TestCase):
     def test_no_arguments(self):
         """Test with no argumest passed to function"""
         self.assertEqual(max_integer(), None)
+
+    def test_one_element(self):
+        """Tests for only one number in the list"""
+        self.assertEqual(max_integer([1]), 1)
+
+    def test_max_beginning(self):
+        """Tests for all positive with max at beginning"""
+        self.assertEqual(max_integer([345, 68, 43, 88]), 345)
