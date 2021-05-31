@@ -107,3 +107,9 @@ Case without any arguments
 >>> bg.integer_validator()
 Traceback (most recent call last):
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Case without value
+
+>>> bg.integer_validator("year")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
