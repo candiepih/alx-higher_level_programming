@@ -64,3 +64,10 @@ Case with floating points
 >>> my_list.print_sorted()
 [-4, 0, 0.7, 5.7, 9.6]
 
+Case empty list
+
+>>> my_list.clear()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
+[]
