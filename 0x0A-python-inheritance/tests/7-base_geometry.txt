@@ -29,6 +29,12 @@ Case with a negative value
 Traceback (most recent call last):
 ValueError: distance must be greater than 0
 
+Case with a float
+
+>>> bg.integer_validator("year", 8.5)
+Traceback (most recent call last):
+TypeError: year must be an integer
+
 Case with zero
 
 >>> bg.integer_validator("age", 0)
@@ -46,3 +52,39 @@ Case with value as boolean
 >>> bg.integer_validator("width", True)
 Traceback (most recent call last):
 TypeError: width must be an integer
+
+Case catched output with string value
+
+>>> try:
+...     bg.integer_validator("name", "John")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+[TypeError] name must be an integer
+
+Case catched output with 0 as value
+
+>>> try:
+...     bg.integer_validator("age", 0)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+[ValueError] age must be greater than 0
+
+Case with negative value
+
+>>> try:
+...     bg.integer_validator("distance", -4)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+[ValueError] distance must be greater than 0
+
+Case with float value
+
+>>> try:
+...     bg.integer_validator("distance", 4.5)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+[TypeError] distance must be an integer
