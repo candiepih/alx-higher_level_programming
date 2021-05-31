@@ -10,7 +10,7 @@ class MyInt(int):
 
     def __ne__(self, x):
         """not equal to comparison"""
-        if self.value is x:
+        if self.value is not x:
             return True
 
     def __eq__(self, x):
