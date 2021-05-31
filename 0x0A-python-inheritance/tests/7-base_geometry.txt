@@ -88,3 +88,10 @@ Case with float value
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 ...
 [TypeError] distance must be an integer
+
+Case with calling area function
+
+>>> bg.integer_validator("my_int", 12)
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
