@@ -6,7 +6,7 @@ class MyList(list):
     """Class that extends the list base class"""
     def __init__(self):
         """Initialize inherited data"""
-        self.__init__()
+        super().__init__()
 
     def print_sorted(self):
         """
