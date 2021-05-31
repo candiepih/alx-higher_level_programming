@@ -26,6 +26,12 @@ Class `MyList` that inherits from `list`
 
 * Public instance method: `def print_sorted(self):` that prints the list, but sorted (ascending sort)
 
+Test suite file: 
+
+[1-my_list.txt](../0x0A-python-inheritance/tests/1-my_list.txt) contains test cases for [1-my_list.py](../0x0A-python-inheritance/1-my_list.py)
+
+To run test suite file run `python3 -m doctest ./tests/1-my_list.txt`
+
 [2-is_same_class.py](../0x0A-python-inheritance/2-is_same_class.py)
 
 Function that returns `True` if the object is exactly an instance of the specified class; otherwise `False`.
@@ -56,6 +62,12 @@ class `BaseGeometry` (based on [6-base_geometry.py](../0x0A-python-inheritance/6
 * if `value` is not an integer: raise a `TypeError` exception, with the message `<name> must be an integer`
 * if `value` is less or equal to 0: raise a `ValueError` exception with the message `<name> must be greater than 0`
 
+Test suite file: 
+
+[7-base_geometry.txt](../0x0A-python-inheritance/tests/7-base_geometry.txt) contains test cases for [7-base_geometry.py](../0x0A-python-inheritance/7-base_geometry.py)
+
+To run test suite file run `python3 -m doctest ./tests/7-base_geometry.txt`
+
 [8-rectangle.py](../0x0A-python-inheritance/8-rectangle.py)
 
 class Rectangle that inherits from `BaseGeometry` ([7-base_geometry.py](../0x0A-python-inheritance/7-base_geometry.py)).
@@ -67,3 +79,27 @@ class Rectangle that inherits from `BaseGeometry` ([7-base_geometry.py](../0x0A-
 [9-rectangle.py](../0x0A-python-inheritance/9-rectangle.py)
 
 class Rectangle that inherits from `BaseGeometry` ([7-base_geometry.py](../0x0A-python-inheritance/7-base_geometry.py). ([8-rectangle.py](../0x0A-python-inheritance/8-rectangle.py))
+
+* `area()` method must be implemented
+* `print()` should print, and `str()` should return, the following rectangle description: `[Rectangle] <width>/<height>`
+
+[10-square.py](../0x0A-python-inheritance/10-square.py)
+
+class `Square` that inherits from `Rectangle` ([9-rectangle.py](../0x0A-python-inheritance/9-rectangle.py))
+
+* Instantiation with size: `def __init__(self, size)`
+* `size` must be private. No getter or setter
+* `size` must be a positive integer, validated by `integer_validator`
+* the `area()` method must be implemented
+
+[11-square.py](../0x0A-python-inheritance/11-square.py)
+
+class Square that inherits from Rectangle ([9-rectangle.py](../0x0A-python-inheritance/9-rectangle.py)
+). (task based on [10-square.py](../0x0A-python-inheritance/10-square.py)).
+
+* `print()` should print, and `str()` should return, the square description: `[Square] <width>/<height>`
+
+[100-my_int.py](../0x0A-python-inheritance/100-my_int.py)
+
+* class `MyInt` that inherits from `int`
+* `MyInt` is a rebel. `MyInt` has `==` and `!=` operators inverted
