@@ -1,0 +1,48 @@
+========================================
+  Documentation of 7-base_geometry.py
+========================================
+
+Contains a `BaseGeometry` class with the following methods
+
+`def area(self):`
+
+which calculates the area of the `BaseGeometry`
+
+`def integer_validator(self, name, value):`
+
+validates the `value` based
+
+Test cases
+==========
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+
+Case with a positive value
+
+>>> bg.integer_validator("my_int", 12)
+>>>
+
+Case with a negative value
+
+>>> bg.integer_validator("distance", -4)
+Traceback (most recent call last):
+ValueError: distance must be greater than 0
+
+Case with zero
+
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+
+Case with a non integer
+
+>>> bg.integer_validator("name", "A!ex")
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+Case with value as boolean
+
+>>> bg.integer_validator("width", True)
+Traceback (most recent call last):
+TypeError: width must be an integer
