@@ -113,3 +113,15 @@ Case without value
 >>> bg.integer_validator("year")
 Traceback (most recent call last):
 TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Case with an array as value
+
+>>> bg.integer_validator("day", [7, 3, 5])
+Traceback (most recent call last):
+TypeError: day must be an integer
+
+Case with a tuple
+
+>>> bg.integer_validator("day", (7, 3, 5))
+Traceback (most recent call last):
+TypeError: day must be an integer
