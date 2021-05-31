@@ -4,12 +4,11 @@
 
 class MyList(list):
     """Class that extends the list base class"""
+
     def __init__(self):
         """Initialize inherited data"""
         super().__init__()
 
     def print_sorted(self):
-        """
-            Prints a sorted list
-        """
+        """Prints a sorted list"""
         print(sorted(self))
