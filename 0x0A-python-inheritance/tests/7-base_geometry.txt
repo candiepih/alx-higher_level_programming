@@ -95,3 +95,9 @@ Case with calling area function
 >>> bg.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
+
+Case with None as value
+
+>>> bg.integer_validator("age", None)
+Traceback (most recent call last):
+TypeError: age must be an integer
