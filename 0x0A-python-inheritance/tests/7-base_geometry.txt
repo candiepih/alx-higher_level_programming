@@ -125,3 +125,9 @@ Case with a tuple
 >>> bg.integer_validator("day", (7, 3, 5))
 Traceback (most recent call last):
 TypeError: day must be an integer
+
+Case with a dictionary
+
+>>> bg.integer_validator("month", {"Jan", "Feb", "Mar"})
+Traceback (most recent call last):
+TypeError: month must be an integer
