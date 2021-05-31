@@ -1,4 +1,4 @@
-#!/usr/bin/ython3
+#!/usr/bin/python3
 """Contains a single method"""
 
 
