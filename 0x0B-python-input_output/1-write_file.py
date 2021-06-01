@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Contains function that write to file"""
 
+
 def write_file(filename="", text=""):
     """
         Writes the content `text` to a file specified

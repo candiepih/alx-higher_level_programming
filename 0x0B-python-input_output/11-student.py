@@ -18,7 +18,7 @@ class Student:
         if attrs is None:
             return dictionary
 
-        d = { k : v for k,v in dictionary.items() if k in attrs}
+        d = {k: v for k, v in dictionary.items() if k in attrs}
         return d
 
     def reload_from_json(self, json):
