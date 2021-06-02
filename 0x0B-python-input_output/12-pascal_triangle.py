@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Contains a single function that draws a pascal triangle"""
 
+
 def pascal_triangle(n):
     """creates a list of pascal triangle"""
     my_list = [[0 for j in range(i + 1)] for i in range(n)]
