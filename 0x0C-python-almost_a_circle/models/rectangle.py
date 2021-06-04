@@ -24,9 +24,13 @@ class Rectangle(Base):
 
     def __str__(self):
         """Returns string representation of the instance"""
-        string = "[{}] ({}) {}/{} - {}/{}"
-        return string.format(self.__class__.__name__, self.id,
-                             self.__x, self.__y, self.__width, self.__height)
+        string = "[{}] ({}) {}/{} - {}"
+        if type(self) == Rectangle:
+            return "{}/{}".format(string.format(self.__class__.__name__,
+                                                self.id, self.__x, self.__y,
+                                                self.__width), self.__height)
+        return string.format(self.__class__.__name__, self.id, self.__x,
+                             self.__y, self.__width)
 
     @staticmethod
     def validate_input(**kwargs):
@@ -70,7 +74,7 @@ class Rectangle(Base):
         return self.__x
 
     @property
-    def y(self, value):
+    def y(self):
         """Retrieves the value of `y`
         Returns:
             value of y
@@ -128,3 +132,17 @@ class Rectangle(Base):
         else:
             for k, v in kwargs.items():
                 setattr(self, k, v)
+
+    def to_dictionary(self):
+        """Retrieves all the attributes of class to dictionary
+        Returns:
+            dictionary containing it's attributes
+        """
+        dictionary = {
+                "id": self.id,
+                "width": self.width,
+                "height": self.height,
+                "x": self.x,
+                "y": self.y
+        }
+        return dictionary
