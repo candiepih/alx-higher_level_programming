@@ -135,5 +135,5 @@ class Rectangle(Base):
             newlist = {"_{}__{}".format(self.__class__.__name__, k): v
                        for k, v in kwargs.items()}
             self.__dict__.update(newlist)
-            if"id" in kwargs.keys():
+            if "id" in kwargs.keys():
                 self.__dict__["id"] = kwargs["id"]
