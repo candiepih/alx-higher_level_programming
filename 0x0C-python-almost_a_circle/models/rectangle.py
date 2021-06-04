@@ -121,19 +121,10 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """Updates the values of the class"""
-        keys = ["id", "width", "height", "x", "y"]
         if args and len(args) > 0:
-            inputs = {keys[i]: v for i, v in enumerate(args)}
-            self.validate_input(**inputs)
-            newlist = {"_{}__{}".format(self.__class__.__name__, k): v
-                       for k, v in inputs.items()}
-            del inputs
-            self.__dict__.update(newlist)
-            self.__dict__["id"] = args[0]
+            keys = ["id", "width", "height", "x", "y"]
+            for i, v in enumerate(args):
+                setattr(self, keys[i], v)
         else:
-            self.validate_input(**kwargs)
-            newlist = {"_{}__{}".format(self.__class__.__name__, k): v
-                       for k, v in kwargs.items()}
-            self.__dict__.update(newlist)
-            if "id" in kwargs.keys():
-                self.__dict__["id"] = kwargs["id"]
+            for k, v in kwargs.items():
+                setattr(self, k, v)
