@@ -44,11 +44,11 @@ class Square(Rectangle):
         """Retrieves all the attributes of class to dictionary
         Returns:
             dictionary containing it's attributes
-	"""
+        """
         dictionary = {
                 "id": self.id,
-		"size": self.size,
-		"x": self.x,
-		"y": self.y
-	}
+                "size": self.size,
+                "x": self.x,
+                "y": self.y
+        }
         return dictionary
