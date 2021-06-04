@@ -58,3 +58,31 @@ class Base:
         if json_string is None or not json_string:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Adds a class method
+        Returns:
+            returns an instance with all attributes already set
+        """
+        dummy = cls(1, 1, 1)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """Loads data from file and uses it to get instances associated
+        Returns:
+            a list of instances:
+        """
+        filename = "{}.json".format(cls.__name__)
+
+        try:
+            with open(filename, encoding="utf-8") as f:
+                string = f.read()
+        except FileNotFoundError:
+            return []
+
+        json = cls.from_json_string(string)
+        instances = [cls.create(**instance) for instance in json]
+        return instances
