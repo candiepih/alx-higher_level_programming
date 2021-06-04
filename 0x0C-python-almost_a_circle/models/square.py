@@ -18,15 +18,15 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        """Retrieves the value of `y`
+        """Retrieves the value of `size`
         Returns:
-            value of y
+            value of size
         """
         return self.width
 
     @size.setter
     def size(self, value):
-        """sets the value of `Square`"""
+        """sets the dimensions of `Square`"""
         self.width = value
         self.height = value
 
