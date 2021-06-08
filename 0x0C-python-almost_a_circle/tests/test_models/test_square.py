@@ -78,7 +78,8 @@ class TestSquare(unittest.TestCase):
         """Test without argument supplied"""
         with self.assertRaises(TypeError) as e:
             s1 = Square()
-            self.assertEqual(e, "__init__() missing 1 required positional argument: 'size'")
+            self.assertEqual(e,"__init__() missing 1 required \
+                             positional argument: 'size'")
 
     def test_size_private(self):
         """Tests if size is an attribute of Square"""
