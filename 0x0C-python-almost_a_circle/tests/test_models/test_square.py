@@ -4,7 +4,7 @@ from models.base import Base
 from models.square import Square
 
 
-class TestSquare(unittest.TestCases):
+class TestSquare(unittest.TestCase):
     """Tests all methods and attributes of the `Square`
     class
     """
