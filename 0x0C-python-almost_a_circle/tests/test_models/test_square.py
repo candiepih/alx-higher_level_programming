@@ -24,4 +24,4 @@ class TestSquare(unittest.TestCase):
         """Test string output of `Square`"""
         Base._Base__nb_objects = 0
         s1 = Square(5)
-        self.assertEqual(s1.__init__(), "[Square] (1) 0/0 - 5")
+        self.assertEqual(s1.__str__(), "[Square] (1) 0/0 - 5")
