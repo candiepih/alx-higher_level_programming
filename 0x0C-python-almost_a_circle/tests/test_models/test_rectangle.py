@@ -41,21 +41,41 @@ class TestRectangle(unittest.TestCase):
         r3.width = 5
         self.assertEqual(r3.width, 5)
 
+    def height_setter_getter_with_int(self):
+        """Test height setter and getter with integers"""
+        Base._Base__nb_objects = 0
+        r3 = Rectangle(2, 3)
+        r3.height = 5
+        self.assertEqual(r3.height, 5)
+
     def width_setter_getter_with_other_type(self):
-        """Test width setter and geter with other data type"""
+        """Test width setter and geter with string"""
         Base._Base__nb_objects = 0
         r3 = Rectangle(2, 3)
         with self.assertRaises(TypeError):
             r3.width = "5"
 
+    def height_setter_getter_with_other_type(self):
+        """Test height setter and geter with string"""
+        Base._Base__nb_objects = 0
+        r3 = Rectangle(2, 3)
+        with self.assertRaises(TypeError):
+            r3.height = "5"
+
+    def width_with_string(self):
+        """Test width with string"""
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            r3 = Rectangle("2", 2)
+
     def width_with_negative(self):
-        """Test with seter and getter with negative"""
+        """Test width with negative"""
         Base._Base__nb_objects = 0
         with self.assertRaises(ValueError):
             r3 = Rectangle(-2, 3)
 
     def width_with_zero(self):
-        "Test setter and getter with zero"""
+        "Test width with zero"""
         Base._Base__nb_objects = 0
         with self.assertRaises(ValueError):
             r3 = Rectangle(0, 3)
@@ -83,3 +103,29 @@ class TestRectangle(unittest.TestCase):
         Base._Base__nb_objects = 0
         with self.assertRaises(TypeError):
             r3 = Rectangle()
+
+    def x_with_string(self):
+        """Test x with string"""
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            r3 = Rectangle(2, 3, "5", 4)
+
+    def x_with_negative(self):
+        """Test x with negative"""
+        Base._Base__nb_objects = 0
+        with self.assertRaises(ValueError):
+            r3 = Rectangle(2, 3, -5, 4)
+
+    def y_with_string(self):
+        """Test y with string"""
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            r3 = Rectangle(2, 3, 5, "4")
+
+    def y_with_negative(self):
+        """Test y with negative"""
+        Base._Base__nb_objects = 0
+        with self.assertRaises(ValueError):
+            r3 = Rectangle(2, 3, 5, -4)
+
+    
