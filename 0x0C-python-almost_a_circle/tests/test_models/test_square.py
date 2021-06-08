@@ -14,6 +14,18 @@ class TestSquare(unittest.TestCase):
         s1 = Square(5)
         self.assertEqual(s1.size, 5)
 
+    def test_size_with_zero(self):
+        """Test size with zero"""
+        with self.assertRaises(ValueError) as e:
+            s1 = Square(0)
+            self.assertEqual(e, "width must be > 0")
+
+    def test_size_with_negative(self):
+        """Test size with negative number"""
+        with self.assertRaises(ValueError) as e:
+            s1 = Square(-3)
+            self.assertEqual(e, "width must be > 0")
+
     def test_size_string(self):
         """Test size with string"""
         with self.assertRaises(TypeError) as e:
@@ -61,3 +73,9 @@ class TestSquare(unittest.TestCase):
         Base._Base__nb_objects = 0
         s1 = Square(5)
         self.assertEqual(s1.__str__(), "[Square] (1) 0/0 - 5")
+
+    def test_size_with_no_argument(self):
+        """Test without argument supplied"""
+        with self.assertRaises(TypeError) as e:
+            s1 = Square()
+            self.assertEqual(e, "__init__() missing 1 required positional argument: 'size'")
