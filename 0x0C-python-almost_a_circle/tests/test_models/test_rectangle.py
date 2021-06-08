@@ -229,7 +229,7 @@ class TestRectangle(unittest.TestCase):
     def test_for_str_without_id(self):
         """Test formatted output class to string without id"""
         Base._Base__nb_objects = 0
-        r1 = Rectangle(4, 6, 2, 1, 12)
+        r1 = Rectangle(4, 6, 2, 1)
         self.assertEqual(r1.__str__(), "[Rectangle] (1) 2/1 - 4/6")
 
     def test_updating_id(self):
