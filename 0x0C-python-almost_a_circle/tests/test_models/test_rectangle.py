@@ -128,4 +128,74 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             r3 = Rectangle(2, 3, 5, -4)
 
-    
+    def width_with_tupple(self):
+        """Test for width with tuple"""
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            r3 = Rectangle((4, 6), 3, 5, 4)
+
+    def width_with_dictionary(self):
+        """Test for width with dictionary"""
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            r3 = Rectangle({"name": "alex", "other_name": "steve"}, 3, 5, 4)
+
+    def width_with_float(self):
+        """Test for width with float"""
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            r3 = Rectangle(8.86, 3, 5, 4)
+
+    def width_with_list(self):
+        """Test for width with list"""
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            r3 = Rectangle([5, 2, 6], 3, 5, 4)
+
+    def width_with_nan(self):
+        """Test for width with nan"""
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            r3 = Rectangle(float('nan'), 3, 5, 4)
+
+    def width_with_inf(self):
+        """Test for width with inf"""
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            r3 = Rectangle(float('inf'), 3, 5, 4)
+
+    def height_with_tupple(self):
+        """Test for height with tuple"""
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            r3 = Rectangle(3, (4, 6), 5, 4)
+
+    def height_with_dictionary(self):
+        """Test for height with dictionary"""
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            r3 = Rectangle(4, {"name": "alex", "other_name": "steve"}, 5, 4)
+
+    def height_with_float(self):
+        """Test for height with float"""
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            r3 = Rectangle(6, 3.642, 5, 4)
+
+    def height_with_list(self):
+        """Test for height with list"""
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            r3 = Rectangle(3, [5, 2, 6], 5, 4)
+
+    def height_with_nan(self):
+        """Test for height with nan"""
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            r3 = Rectangle(4, float('nan'), 5, 4)
+
+    def height_with_inf(self):
+        """Test for height with inf"""
+        Base._Base__nb_objects = 0
+        with self.assertRaises(TypeError):
+            r3 = Rectangle(3, float('inf'), 5, 4)
