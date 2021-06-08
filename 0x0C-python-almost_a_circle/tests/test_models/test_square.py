@@ -83,7 +83,3 @@ class TestSquare(unittest.TestCase):
     def test_size_private(self):
         """Tests if size is an attribute of Square"""
         self.assertFalse(hasattr(Square, "_Square__size"))
-
-    def test_size_public(self):
-        """Tests if size is an attribute of Square"""
-        self.assertFalse(hasattr(Square, "size"))
