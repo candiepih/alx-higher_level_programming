@@ -90,12 +90,6 @@ class TestSquare(unittest.TestCase):
         s1 = Square(6)
         self.assertEqual(s1.area(), 36)
 
-    def test_display_square(self):
-        """Testing how square is displayed"""
-        Base._Base__nb_objects = 0
-        s2 = Square(1)
-        self.assertEqual(s2.display(), "#")
-
     def test_with_id(self):
         """Test square string representation with id argument"""
         Base._Base__nb_objects = 0
