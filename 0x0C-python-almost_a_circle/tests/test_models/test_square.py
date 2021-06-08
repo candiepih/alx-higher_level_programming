@@ -79,3 +79,11 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(TypeError) as e:
             s1 = Square()
             self.assertEqual(e, "__init__() missing 1 required positional argument: 'size'")
+
+    def test_size_private(self):
+        """Tests if size is an attribute of Square"""
+        self.assertFalse(hasattr(Square, "_Square__size"))
+
+    def test_size_public(self):
+        """Tests if size is an attribute of Square"""
+        self.assertFalse(hasattr(Square, "size"))
