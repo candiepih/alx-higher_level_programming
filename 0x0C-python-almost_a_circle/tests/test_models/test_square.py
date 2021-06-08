@@ -109,3 +109,15 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(TypeError) as e:
             s3 = Square(3, "8", 3, 83)
             self.assertEqual(e, "x must be an integer")
+
+    def test_y_with_negative(self):
+        """Test y with a negative integer"""
+        with self.assertRaises(ValueError) as e:
+            s3 = Square(3, 5, -3, 83)
+            self.assertEqual(e, "y must be >= 0")
+
+    def test_y_with_string(self):
+        """Test y with a string"""
+        with self.assertRaises(TypeError) as e:
+            s3 = Square(3, 8, "3", 83)
+            self.assertEqual(e, "y must be an integer")
