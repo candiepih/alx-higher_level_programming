@@ -16,9 +16,8 @@ class TestSquare(unittest.TestCase):
 
     def test_size_with_string(self):
         """Test size with string"""
-        try:
+        with self.assertRaises(TypeError) as e:
             s1 = Square("5k")
-        except TypeError as e:
             self.assertEqual(e, "width must be an integer")
 
     def test_printing_square(self):
