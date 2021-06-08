@@ -213,3 +213,18 @@ class TestRectangle(unittest.TestCase):
         r3 = Rectangle(2, 3, 7, 8)
         with self.assertRaises(TypeError):
             r3.y = "5"
+
+    # Test for area
+    def test_for_area(self):
+        """Testing for area"""
+        Base._Base__nb_objects = 0
+        r1 = Rectangle(3, 2)
+        self.assertEqual(r1.area(), 6)
+
+    # Test for display
+    def test_for_display(self):
+        """Test for displaying `Rectangle`"""
+        Base._Base__nb_objects = 0
+        r1 = Rectangle(6, 1)
+        self.assertEqual(r1.display(), None)
+        
