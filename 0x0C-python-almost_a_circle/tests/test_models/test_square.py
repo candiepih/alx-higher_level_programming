@@ -83,3 +83,23 @@ class TestSquare(unittest.TestCase):
     def test_size_private(self):
         """Tests if size is an attribute of Square"""
         self.assertFalse(hasattr(Square, "_Square__size"))
+
+    def test_area(self):
+        """Testing area of `Square`"""
+        Base._Base__nb_objects = 0
+        s1 = Square(6)
+        self.assertEqual(s1.area(), 36)
+
+    def test_display_square(self):
+        """Testing how square is displayed"""
+        Base._Base__nb_objects = 0
+        s2 = Square(1)
+        self.assertEqual(s2.display(), "#")
+
+    def test_with_id(self):
+        """Test square string representation with id argument"""
+        Base._Base__nb_objects = 0
+        s1 = Square(6)
+        s2 = Square(1)
+        s3 = Square(3, 1, 3)
+        self.assertEqual(s3.__str__(), "[Square] (3) 1/3 - 3")
