@@ -101,5 +101,17 @@ class TestSquare(unittest.TestCase):
         Base._Base__nb_objects = 0
         s1 = Square(6)
         s2 = Square(1)
-        s3 = Square(3, 1, 3)
-        self.assertEqual(s3.__str__(), "[Square] (3) 1/3 - 3")
+        s3 = Square(3, 1, 3, 83)
+        self.assertEqual(s3.__str__(), "[Square] (83) 1/3 - 3")
+
+    def test_x_with_negative(self):
+        """Test x with a negative integer"""
+        with self.assertRaises(ValueError) as e:
+            s3 = Square(3, -5, 3, 83)
+            self.assertEqual(e, "x must be >= 0")
+
+    def test_x_with_string(self):
+        """Test x with a string"""
+        with self.assertRaises(TypeError) as e:
+            s3 = Square(3, "8", 3, 83)
+            self.assertEqual(e, "x must be an integer")
