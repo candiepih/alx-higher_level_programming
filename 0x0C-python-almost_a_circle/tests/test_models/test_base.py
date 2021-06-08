@@ -2,6 +2,7 @@
 import unittest
 from models.base import Base
 
+
 class TestBase(unittest.TestCase):
     """Handling of `Base` class test cases"""
     def test_with_no_arguments(self):
