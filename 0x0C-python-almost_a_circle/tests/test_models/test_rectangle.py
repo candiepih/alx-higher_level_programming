@@ -199,3 +199,17 @@ class TestRectangle(unittest.TestCase):
         Base._Base__nb_objects = 0
         with self.assertRaises(TypeError):
             r3 = Rectangle(3, float('inf'), 5, 4)
+
+    def x_setter_getter_with_other_type(self):
+        """Test x setter and geter with string"""
+        Base._Base__nb_objects = 0
+        r3 = Rectangle(2, 3, 4, 6)
+        with self.assertRaises(TypeError):
+            r3.x = "5"
+
+    def y_setter_getter_with_other_type(self):
+        """Test y setter and geter with string"""
+        Base._Base__nb_objects = 0
+        r3 = Rectangle(2, 3, 7, 8)
+        with self.assertRaises(TypeError):
+            r3.y = "5"
