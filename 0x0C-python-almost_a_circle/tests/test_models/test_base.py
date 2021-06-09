@@ -98,8 +98,7 @@ class TestBase(unittest.TestCase):
             read = file.read()
             my_list = Base.from_json_string(read)
             self.assertDictEqual(r1.to_dictionary(), my_list[0])
-            
-            
+
     def test_save_to_file_Square(self):
         """Tests saving of json representation of objects to file"""
         Base._Base__nb_objects = 0
