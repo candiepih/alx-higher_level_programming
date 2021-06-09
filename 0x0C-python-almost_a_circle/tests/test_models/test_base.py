@@ -117,7 +117,7 @@ class TestBase(unittest.TestCase):
         Square.save_to_file(None)
         with open("Square.json", "r") as file:
             read = file.read()
-            self.assertEqual(read, [])
+            self.assertEqual(read, '[]')
 
     def test_save_to_file_Square_empty_list(self):
         """Test saving to file with an empty list"""
@@ -125,7 +125,7 @@ class TestBase(unittest.TestCase):
         Square.save_to_file([])
         with open("Square.json", "r") as file:
             read = file.read()
-            self.assertEqual(read, "[]")
+            self.assertEqual(read, '[]')
 
     def test_save_to_file_Square_only_square(self):
         """Test saving to file with only `Square`"""
