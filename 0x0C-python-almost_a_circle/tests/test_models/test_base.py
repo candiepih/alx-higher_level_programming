@@ -57,7 +57,7 @@ class TestBase(unittest.TestCase):
         """Check if attribute exists in an object"""
         self.assertFalse(hasattr(Base, '__nb_objects'))
 
-    def test_save_to_file(self):
+    def test_save_to_file_Rectangle(self):
         """Tests saving of json representation of objects to file"""
         Base._Base__nb_objects = 0
         r1 = Rectangle(10, 7, 2, 8)
@@ -68,3 +68,51 @@ class TestBase(unittest.TestCase):
             my_list = Base.from_json_string(read)
             self.assertDictEqual(r1.to_dictionary(), my_list[0])
             self.assertDictEqual(r2.to_dictionary(), my_list[1])
+
+    def test_save_to_file_Rectangle_none(self):
+        """Test saving to file with none"""
+        Base._Base__nb_objects = 0
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as file:
+            read = file.read()
+            my_list = Base.from_json_string(read)
+            self.assertListEqual(my_list, [])
+
+    def test_save_to_file_Rectangle_empty_list(self):
+        """Test saving to file with none"""
+        Base._Base__nb_objects = 0
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as file:
+            read = file.read()
+            my_list = Base.from_json_string(read)
+            self.assertListEqual(my_list, [])
+
+    def test_save_to_file_Square(self):
+        """Tests saving of json representation of objects to file"""
+        Base._Base__nb_objects = 0
+        r1 = Rectangle(10, 7, 2, 8)
+        s2 = Square(2)
+        Square.save_to_file([r1, s2])
+        with open("Square.json", "r") as file:
+            read = file.read()
+            my_list = Base.from_json_string(read)
+            self.assertDictEqual(r1.to_dictionary(), my_list[0])
+            self.assertDictEqual(r2.to_dictionary(), my_list[1])
+
+    def test_save_to_file_Square_none(self):
+        """Test saving to file with none"""
+        Base._Base__nb_objects = 0
+        Square.save_to_file(None)
+        with open("Square.json", "r") as file:
+            read = file.read()
+            my_list = Base.from_json_string(read)
+            self.assertListEqual(my_list, [])
+
+    def test_save_to_file_Square_empty_list(self):
+        """Test saving to file with an empty list"""
+        Base._Base__nb_objects = 0
+        Square.save_to_file([])
+        with open("Square.json", "r") as file:
+            read = file.read()
+            my_list = Base.from_json_string(read)
+            self.assertListEqual(my_list, [])
