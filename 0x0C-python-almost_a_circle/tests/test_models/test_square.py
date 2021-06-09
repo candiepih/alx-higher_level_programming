@@ -172,7 +172,7 @@ class TestSquare(unittest.TestCase):
         """Testing updating all with kwarg"""
         Base._Base__nb_objects = 0
         s1 = Square(5)
-        s1.update(size=7, id=89, y=1, x = 4)
+        s1.update(size=7, id=89, y=1, x=4)
         self.assertEqual(s1.__str__(), "[Square] (89) 4/1 - 7")
 
     def test_update_without_arg(self):
@@ -188,4 +188,5 @@ class TestSquare(unittest.TestCase):
         s1 = Square(10, 2, 1)
         s1_dictionary = s1.to_dictionary()
         self.assertEqual(type(s1_dictionary), dict)
-        self.assertDictEqual(s1_dictionary, {'id': 1, 'size': 10, 'x': 2, 'y': 1})
+        self.assertDictEqual(s1_dictionary, {'id': 1, 'size': 10,
+                                             'x': 2, 'y': 1})
