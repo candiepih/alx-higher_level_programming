@@ -1,6 +1,7 @@
 """Unittest for the `Base` class"""
 import unittest
 from models.base import Base
+from models.rectangle import Rectangle
 
 
 class TestBase(unittest.TestCase):
@@ -55,3 +56,15 @@ class TestBase(unittest.TestCase):
     def test_for_private_attribute(self):
         """Check if attribute exists in an object"""
         self.assertFalse(hasattr(Base, '__nb_objects'))
+
+    def test_save_to_file(self):
+        """Tests saving of json representation of objects to file"""
+        Base._Base__nb_objects = 0
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        Rectangle.save_to_file([r1, r2])
+        with open("Rectangle.json", "r") as file:
+            read = file.read()
+            my_list = Base.from_json_string(read)
+            self.assertDictEqual(r1.to_dictionary() == my_list[0])
+            self.assertDictEqual(r2.to_dictionary() == my_list[1])
