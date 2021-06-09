@@ -118,6 +118,17 @@ class TestBase(unittest.TestCase):
             my_list = Base.from_json_string(read)
             self.assertListEqual(my_list, [])
 
+    def test_save_to_file_Square_only_square(self):
+        """Test saving to file with only `Square`"""
+        Base._Base__nb_objects = 0
+        s1 = Square(1)
+        list_squares = [s1]
+        Square.save_to_file(list_squares)
+        with open("Square.json", "r") as file:
+            read = file.read()
+            my_list = Base.from_json_string(read)
+            self.assertDictEqual(s1.to_dictionary(), my_list[0])
+
     def test_create_Rectangle(self):
         """Testing creating of new `Rectangle` instance"""
         Base._Base__nb_objects = 0
