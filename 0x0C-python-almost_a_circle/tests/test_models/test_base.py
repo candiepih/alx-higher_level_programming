@@ -98,7 +98,7 @@ class TestBase(unittest.TestCase):
             read = file.read()
             my_list = Base.from_json_string(read)
             self.assertDictEqual(r1.to_dictionary(), my_list[0])
-            self.assertDictEqual(r2.to_dictionary(), my_list[1])
+            self.assertDictEqual(s2.to_dictionary(), my_list[1])
 
     def test_save_to_file_Square_none(self):
         """Test saving to file with none"""
