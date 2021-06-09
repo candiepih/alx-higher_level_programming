@@ -117,3 +117,21 @@ class TestBase(unittest.TestCase):
             read = file.read()
             my_list = Base.from_json_string(read)
             self.assertListEqual(my_list, [])
+
+    def test_create_Rectangle(self):
+        """Testing creating of new `Rectangle` instance"""
+        Base._Base__nb_objects = 0
+        r1 = Rectangle(3, 5, 1)
+        r1_dictionary = r1.to_dictionary()
+        r2 = Rectangle.create(**r1_dictionary)
+        self.assertFalse(r1 is r2)
+        self.assertDictEqual(r1_dictionary, r2.to_dictionary())
+
+    def test_create_Square(self):
+        """Testing creating of new `Square` instance"""
+        Base._Base__nb_objects = 0
+        s1 = Square(3, 5, 1)
+        s1_dictionary = s1.to_dictionary()
+        s2 = Square.create(**s1_dictionary)
+        self.assertFalse(s1 is s2)
+        self.assertDictEqual(s1_dictionary, s2.to_dictionary())
