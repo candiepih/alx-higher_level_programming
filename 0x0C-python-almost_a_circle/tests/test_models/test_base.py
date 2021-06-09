@@ -126,8 +126,7 @@ class TestBase(unittest.TestCase):
         Square.save_to_file([])
         with open("Square.json", "r") as file:
             read = file.read()
-            my_list = Base.from_json_string(read)
-            self.assertListEqual(my_list, [])
+            self.assertEqual(read, "[]")
 
     def test_save_to_file_Square_only_square(self):
         """Test saving to file with only `Square`"""
