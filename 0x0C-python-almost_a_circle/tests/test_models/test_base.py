@@ -88,6 +88,18 @@ class TestBase(unittest.TestCase):
             my_list = Base.from_json_string(read)
             self.assertListEqual(my_list, [])
 
+    def test_save_to_file_rectangle_only(self):
+        """Tests saving of json representation of objects to file
+        for `Rectangle` only"""
+        Base._Base__nb_objects = 0
+        r1 = Rectangle(10, 7, 2, 8)
+        Rectangle.save_to_file([r1])
+        with open("Rectangle.json", "r") as file:
+            read = file.read()
+            my_list = Base.from_json_string(read)
+            self.assertDictEqual(r1.to_dictionary(), my_list[0])
+            
+            
     def test_save_to_file_Square(self):
         """Tests saving of json representation of objects to file"""
         Base._Base__nb_objects = 0
@@ -112,7 +124,8 @@ class TestBase(unittest.TestCase):
     def test_save_to_file_Square_empty_list(self):
         """Test saving to file with an empty list"""
         Base._Base__nb_objects = 0
-        Square.save_to_file([])
+        empty_list = []
+        Square.save_to_file(empty_list)
         with open("Square.json", "r") as file:
             read = file.read()
             my_list = Base.from_json_string(read)
@@ -122,8 +135,7 @@ class TestBase(unittest.TestCase):
         """Test saving to file with only `Square`"""
         Base._Base__nb_objects = 0
         s1 = Square(1)
-        list_squares = [s1]
-        Square.save_to_file(list_squares)
+        Square.save_to_file([s1])
         with open("Square.json", "r") as file:
             read = file.read()
             my_list = Base.from_json_string(read)
