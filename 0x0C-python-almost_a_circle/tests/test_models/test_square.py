@@ -181,3 +181,11 @@ class TestSquare(unittest.TestCase):
         s1 = Square(5)
         s1.update()
         self.assertEqual(s1.__str__(), "[Square] (1) 0/0 - 5")
+
+    def test_to_dictionary(self):
+        """Testing `Square` to dictionary output"""
+        Base._Base__nb_objects = 0
+        s1 = Square(10, 2, 1)
+        s1_dictionary = s1.to_dictionary()
+        self.assertEqual(type(s1_dictionary), dict)
+        self.assertDictEqual(s1_dictionary, {'id': 1, 'size': 10, 'x': 2, 'y': 1})
