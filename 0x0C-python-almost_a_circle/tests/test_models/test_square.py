@@ -127,50 +127,50 @@ class TestSquare(unittest.TestCase):
         """Testing for updating id"""
         s1 = Square(5)
         s1.update(10)
-        self.assertEqual(r1.__str__(), "[Square] (10) 0/0 - 5")
+        self.assertEqual(s1.__str__(), "[Square] (10) 0/0 - 5")
 
     def test_updating_size(self):
         """Testing for updating size"""
         s1 = Square(5)
         s1.update(1, 2)
-        self.assertEqual(r1.__str__(), "[Square] (1) 0/0 - 2")
+        self.assertEqual(s1.__str__(), "[Square] (1) 0/0 - 2")
 
     def test_updating_x(self):
         """Testing for updating x"""
         s1 = Square(5)
         s1.update(1, 2, 3)
-        self.assertEqual(r1.__str__(), "[Square] (1) 3/0 - 2")
+        self.assertEqual(s1.__str__(), "[Square] (1) 3/0 - 2")
 
     def test_updating_y(self):
         """Testing for updating y"""
         s1 = Square(5)
         s1.update(1, 2, 3, 4)
-        self.assertEqual(r1.__str__(), "[Square] (1) 3/4 - 2")
+        self.assertEqual(s1.__str__(), "[Square] (1) 3/4 - 2")
 
     def test_kwarg_update_1(self):
         """Testing updating x with kwarg"""
         Base._Base__nb_objects = 0
         s1 = Square(5)
         s1.update(x=12)
-        self.assertEqual(r1.__str__(), "[Square] (1) 12/0 - 5")
+        self.assertEqual(s1.__str__(), "[Square] (1) 12/0 - 5")
 
     def test_kwarg_update_2(self):
         """Testing updating size and x with kwarg"""
         Base._Base__nb_objects = 0
         s1 = Square(5)
         s1.update(size=7, y=1)
-        self.assertEqual(r1.__str__(), "[Square] (1) 0/1 - 7")
+        self.assertEqual(s1.__str__(), "[Square] (1) 0/1 - 7")
 
     def test_kwarg_update_3(self):
         """Testing updating id, y and size with kwarg"""
         Base._Base__nb_objects = 0
         s1 = Square(5)
         s1.update(size=7, id=89, y=1)
-        self.assertEqual(r1.__str__(), "[Square] (89) 0/1 - 7")
+        self.assertEqual(s1.__str__(), "[Square] (89) 0/1 - 7")
 
     def test_kwarg_update_4(self):
         """Testing updating all with kwarg"""
         Base._Base__nb_objects = 0
         s1 = Square(5)
         s1.update(size=7, id=89, y=1, x = 4)
-        self.assertEqual(r1.__str__(), "[Square] (89) 4/1 - 7")
+        self.assertEqual(s1.__str__(), "[Square] (89) 4/1 - 7")
