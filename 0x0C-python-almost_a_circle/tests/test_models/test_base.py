@@ -66,5 +66,5 @@ class TestBase(unittest.TestCase):
         with open("Rectangle.json", "r") as file:
             read = file.read()
             my_list = Base.from_json_string(read)
-            self.assertDictEqual(r1.to_dictionary() == my_list[0])
-            self.assertDictEqual(r2.to_dictionary() == my_list[1])
+            self.assertDictEqual(r1.to_dictionary(), my_list[0])
+            self.assertDictEqual(r2.to_dictionary(), my_list[1])
