@@ -190,3 +190,12 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(type(s1_dictionary), dict)
         self.assertDictEqual(s1_dictionary, {'id': 1, 'size': 10,
                                              'x': 2, 'y': 1})
+
+    def test_save_to_file_empty_list(self):
+        """Test saving to file with an empty list"""
+        Base._Base__nb_objects = 0
+        Square.save_to_file([])
+        with open("Square.json", "r") as file:
+            read = file.read()
+            my_list = Base.from_json_string(read)
+            self.assertListEqual(my_list, [])
