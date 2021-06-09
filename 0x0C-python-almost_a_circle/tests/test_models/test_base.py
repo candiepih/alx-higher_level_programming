@@ -155,7 +155,6 @@ class TestBase(unittest.TestCase):
 
     def test_load_from_file_square(self):
         """Test loading from file for `Square`"""
-        Base._Base__nb_objects = 0
         s1 = Square(5)
         s2 = Square(7, 9, 1)
         list_squares_input = [s1, s2]
