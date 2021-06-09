@@ -114,8 +114,7 @@ class TestBase(unittest.TestCase):
     def test_save_to_file_Square_none(self):
         """Test saving to file with none"""
         Base._Base__nb_objects = 0
-        to_list = None
-        Square.save_to_file(to_list)
+        Square.save_to_file(None)
         with open("Square.json", "r") as file:
             read = file.read()
             my_list = Base.from_json_string(read)
@@ -124,8 +123,8 @@ class TestBase(unittest.TestCase):
     def test_save_to_file_Square_empty_list(self):
         """Test saving to file with an empty list"""
         Base._Base__nb_objects = 0
-        to_list = []
-        Square.save_to_file(to_list)
+        s1 = Square(2)
+        s1.save_to_file([])
         with open("Square.json", "r") as file:
             read = file.read()
             my_list = Base.from_json_string(read)
