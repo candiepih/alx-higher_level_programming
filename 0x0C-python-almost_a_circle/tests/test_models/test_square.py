@@ -174,3 +174,10 @@ class TestSquare(unittest.TestCase):
         s1 = Square(5)
         s1.update(size=7, id=89, y=1, x = 4)
         self.assertEqual(s1.__str__(), "[Square] (89) 4/1 - 7")
+
+    def test_update_without_arg(self):
+        """Testing updating square without any argument passed"""
+        Base._Base__nb_objects = 0
+        s1 = Square(5)
+        s1.update()
+        self.assertEqual(s1.__str__(), "[Square] (1) 0/0 - 5")
