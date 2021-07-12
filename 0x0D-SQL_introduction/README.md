@@ -113,4 +113,17 @@ script that converts `hbtn_0c_0` database to `UTF8 (utf8mb4, collate utf8mb4_uni
 * Table `first_table`
 * Field `name` in `first_table`
 
-[]()
+[101-avg_temperatures.sql](../0x0D-SQL_introduction/101-avg_temperatures.sql)
+
+Imports in `hbtn_0c_0` database this table dump: [`temparatures`](../0x0D-SQL_introduction/temperatures.sql)
+and displays the average temperature (Fahrenheit) by city ordered by temperature (descending).
+
+[102-top_city.sql](../0x0D-SQL_introduction/102-top_city.sql)
+
+Imports in `hbtn_0c_0` database this table dump: [`temparatures`](../0x0D-SQL_introduction/temperatures.sql)
+and displays the top 3 of cities temperature during July and August ordered by temperature (descending)
+
+[103-max_state.sql](../0x0D-SQL_introduction/103-max_state.sql)
+
+Imports in `hbtn_0c_0` database this table dump: [`temparatures`](../0x0D-SQL_introduction/temperatures.sql)
+and displays the max temperature of each state (ordered by State name).
