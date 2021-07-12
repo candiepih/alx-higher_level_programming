@@ -76,3 +76,41 @@ script creates these records:
 * `id` = 3, `name` = “Bob”, `score` = 14
 * `id` = 4, `name` = “George”, `score` = 8
 
+[10-top_score.sql](../0x0D-SQL_introduction/10-top_score.sql)
+
+script that lists all records of the table `second_table` of the database `hbtn_0c_0` in MySQL server.
+
+[11-best_score.sql](../0x0D-SQL_introduction/11-best_score.sql)
+
+script that lists all records with a `score >= 10` in the table `second_table` of the database `hbtn_0c_0` in MySQL server
+
+[12-no_cheating.sql](../0x0D-SQL_introduction/12-no_cheating.sql)
+
+script that updates the score of Bob to `10` in the table `second_table`.
+* not allowed to use Bob’s id value, only the  `name` field
+
+[13-change_class.sql](../main/0x0D-SQL_introduction/13-change_class.sql)
+
+script that removes all records with a `score <= 5` in the table `second_table` of the database `hbtn_0c_0` in MySQL server
+
+[14-average.sql](../0x0D-SQL_introduction/14-average.sql)
+
+script that computes the score average of all records in the table `second_table` of the database `hbtn_0c_0` in MySQL server
+
+[15-groups.sql](../0x0D-SQL_introduction/15-groups.sql)
+
+script that lists the number of records with the same score in the table `second_table` of the database `hbtn_0c_0` in MySQL server.
+
+[16-no_link.sql](../0x0D-SQL_introduction/16-no_link.sql)
+
+script that lists all records of the table `second_table` of the database `hbtn_0c_0` in MySQL server
+
+[100-move_to_utf8.sql](../0x0D-SQL_introduction/100-move_to_utf8.sql)
+
+script that converts `hbtn_0c_0` database to `UTF8 (utf8mb4, collate utf8mb4_unicode_ci)` in MySQL server.
+
+* Database `hbtn_0c_0`
+* Table `first_table`
+* Field `name` in `first_table`
+
+[]()
