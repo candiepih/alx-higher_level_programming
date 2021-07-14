@@ -82,6 +82,8 @@ script that creates the database `hbtn_0d_usa` and the table `cities` (in the da
 
 script that lists all the cities of California that can be found in the database `hbtn_0d_usa`.
 
+Requirements:
+
 * The states table contains only one record where `name = California` (but the `id` can be different, as per the example)
 * Results must be sorted in ascending order by `cities.id`
 * You are not allowed to use the `JOIN` keyword
@@ -90,11 +92,20 @@ script that lists all the cities of California that can be found in the database
 
 script that lists all cities contained in the database `hbtn_0d_usa`.
 
+Requirements:
+
 * Each record should display: `cities.id - cities.name - states.name`
 * Results must be sorted in ascending order by `cities.id`
 * Use only one `SELECT` statement
 
 [10-genre_id_by_show.sql](../0x0E-SQL_more_queries/10-genre_id_by_show.sql)
 
-Imports the database dump from `hbtn_0d_tvshows` to your MySQL server
+Imports the database dump from [`hbtn_0d_tvshows`](../0x0E-SQL_more_queries/dump.sql) to MySQL server
+and lists all shows contained in `hbtn_0d_tvshows` that have at least one genre linked.
+
+Requirements:
+
+* Each record should display: `tv_shows.title - tv_show_genres.genre_id`
+* Results must be sorted in ascending order by `tv_shows.title` and `tv_show_genres.genre_id`
+* You can use only one `SELECT` statement
 
