@@ -145,3 +145,39 @@ Requirements:
 * Don’t display a genre that doesn’t have any shows linked
 * Results must be sorted in descending order by the number of shows linked
 * You can use only one `SELECT` statement
+
+[14-my_genres.sql](../0x0E-SQL_more_queries/14-my_genres.sql)
+
+Imports the database dump from [`hbtn_0d_tvshows`](../0x0E-SQL_more_queries/dump.sql) to MySQL server
+and uses the `hbtn_0d_tvshows` database to lists all genres of the show `Dexter`.
+
+Requirements:
+
+* The `tv_shows` table contains only one record where `title` = `Dexter` (but the `id` can be different)
+* Each record should display: `tv_genres.name`
+* Results must be sorted in ascending order by the genre name
+* You can use only one `SELECT` statement
+
+[15-comedy_only.sql](../0x0E-SQL_more_queries/15-comedy_only.sql)
+
+Imports the database dump from [`hbtn_0d_tvshows`](../0x0E-SQL_more_queries/dump.sql) to MySQL server
+and lists all Comedy shows in the database `hbtn_0d_tvshows`.
+
+Requirements:
+
+* The `tv_genres` table contains only one record where `name` = `Comedy` (but the `id` can be different)
+* Each record should display: `tv_shows.title`
+* Results must be sorted in ascending order by the show title
+* You can use only one `SELECT` statement
+
+[16-shows_by_genre.sql](../0x0E-SQL_more_queries/16-shows_by_genre.sql)
+
+Imports the database dump from [`hbtn_0d_tvshows`](../0x0E-SQL_more_queries/dump.sql) to MySQL server
+and lists all shows, and all genres linked to that show, from the database `hbtn_0d_tvshows`.
+
+Requirements:
+
+* If a show doesn’t have a genre, display `NULL` in the genre column
+* Each record should display: `tv_shows.title` - `tv_genres.name`
+* Results must be sorted in ascending order by the show title and genre name
+* You can use only one `SELECT` statement
