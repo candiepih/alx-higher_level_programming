@@ -51,4 +51,30 @@ script that creates the table `id_not_null` on your MySQL server.
 * `id` INT with the default value 1
 * `name` VARCHAR(256)
 
-[]()
+[5-unique_id.sql](../0x0E-SQL_more_queries/5-unique_id.sql)
+
+script that creates the table `unique_id` on your MySQL server.
+
+`unique_id` description:
+
+* `id` INT with the default value 1 and must be unique
+* `name` VARCHAR(256)
+
+[6-states.sql](../0x0E-SQL_more_queries/6-states.sql)
+
+script that creates the database `hbtn_0d_usa` and the table `states` (in the database `hbtn_0d_usa`)
+
+`states` description:
+* `id` INT unique, auto generated, can’t be null and is a primary key
+* `name` VARCHAR(256) can’t be null
+
+[7-cities.sql](../0x0E-SQL_more_queries/7-cities.sql)
+
+script that creates the database `hbtn_0d_usa` and the table `cities` (in the database `hbtn_0d_usa`) 
+
+`cities` description:
+
+* `id` INT unique, auto generated, can’t be null and is a primary key
+* `state_id` INT, can’t be null and must be a `FOREIGN KEY` that references to `id` of the states table
+* `name` VARCHAR(256) can’t be null
+
