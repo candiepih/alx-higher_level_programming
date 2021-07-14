@@ -78,3 +78,23 @@ script that creates the database `hbtn_0d_usa` and the table `cities` (in the da
 * `state_id` INT, can’t be null and must be a `FOREIGN KEY` that references to `id` of the states table
 * `name` VARCHAR(256) can’t be null
 
+[8-cities_of_california_subquery.sql](../0x0E-SQL_more_queries/8-cities_of_california_subquery.sql)
+
+script that lists all the cities of California that can be found in the database `hbtn_0d_usa`.
+
+* The states table contains only one record where `name = California` (but the `id` can be different, as per the example)
+* Results must be sorted in ascending order by `cities.id`
+* You are not allowed to use the `JOIN` keyword
+
+[9-cities_by_state_join.sql](../0x0E-SQL_more_queries/9-cities_by_state_join.sql)
+
+script that lists all cities contained in the database `hbtn_0d_usa`.
+
+* Each record should display: `cities.id - cities.name - states.name`
+* Results must be sorted in ascending order by `cities.id`
+* Use only one `SELECT` statement
+
+[10-genre_id_by_show.sql](../0x0E-SQL_more_queries/10-genre_id_by_show.sql)
+
+Imports the database dump from `hbtn_0d_tvshows` to your MySQL server
+
