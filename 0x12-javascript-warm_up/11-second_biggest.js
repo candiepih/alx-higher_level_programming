@@ -7,5 +7,5 @@ if (argv.length === 2 || argv.length === 3) {
   const { argv } = require('process');
   newArgv.sort();
   newArgv.reverse();
-  console.log(parseInt(newArgv[1]));
+  console.log(newArgv[1]);
 }
