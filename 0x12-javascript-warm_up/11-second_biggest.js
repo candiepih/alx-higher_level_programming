@@ -7,6 +7,5 @@ if (argv.length <= 3) {
   let newArgv = argv.slice(2, argv.length);
   newArgv = newArgv.map((value) => parseInt(value));
   newArgv.sort((a, b) => b - a);
-  newArgv.reverse();
   console.log(newArgv[1]);
 }
