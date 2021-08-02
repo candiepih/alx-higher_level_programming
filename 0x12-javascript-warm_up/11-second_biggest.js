@@ -1,10 +1,10 @@
 #!/usr/bin/node
-const newArgv = argv.slice(2, argv.length);
+const { argv } = require('process');
 
 if (argv.length <= 3) {
   console.log(0);
 } else {
-  const { argv } = require('process');
+  const newArgv = argv.slice(2, argv.length);
   newArgv.sort();
   newArgv.reverse();
   console.log(newArgv[1]);
