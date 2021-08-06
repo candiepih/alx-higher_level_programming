@@ -12,7 +12,7 @@ s_name = argv[4]
 conn = MySQLdb.connect(host="localhost", port=3306, user=username,
                        passwd=password, db=db_name, charset="utf8")
 cur = conn.cursor()
-sql = ("SELECT * FROM states WHERE name = %s ORDER BY id ASC"
+sql = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
 cur.execute(sql, (s_name,))
 rows = cur.fetchall()
 
