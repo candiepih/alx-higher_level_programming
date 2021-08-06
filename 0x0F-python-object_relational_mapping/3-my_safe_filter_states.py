@@ -8,13 +8,12 @@ from sys import argv
 username = argv[1]
 password = argv[2]
 db_name = argv[3]
-search_name = MySQLdb.escape_string(argv[4])
-
+s_name = argv[4]
 conn = MySQLdb.connect(host="localhost", port=3306, user=username,
                        passwd=password, db=db_name, charset="utf8")
 cur = conn.cursor()
-sql = """SELECT * FROM states WHERE Name=%s ORDER BY id ASC"""
-cur.execute(sql, (search_name,))
+sql = ("SELECT * FROM states WHERE name = %s ORDER BY id ASC"
+cur.execute(sql, (s_name,))
 rows = cur.fetchall()
 
 for row in rows:
