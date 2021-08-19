@@ -74,4 +74,29 @@ Solution details:
 One of the ways to find peak in a list would be to sort it, then get the largest item.  
 If a list is sorted in ascending order then the peak is the last element. If list is sorted in descending order then the peak is the first element.
 
-Since python's own builtin sort method implements `Timsort` algorithm to perform sort which basically is one of the fastest sorting algorithm, we then can sort list in descending order and get peak at first index
+Since python's own builtin sort method implements `Timsort` algorithm to perform sort which basically is a hybrid stable sorting algorithm derived from merge sort and insertion sort, we then use the python's sort method to sort the list in descending order and get first item in list at index 0 which will serve as our peak.
+
+[100-status_code.sh](./100-status_code.sh)
+
+Bash script that sends a request to a URL passed as an argument, and displays only the status code of the response.
+
+Requirements:
+
+* You are not allowed to use any pipe, redirection, etc.
+* You are not allowed to use `;` and `&&`
+
+[101-post_json.sh](./101-post_json.sh)
+
+Bash script that sends a JSON `POST` request to a URL passed as the first argument, and displays the body of the response.
+
+Requirements:
+
+* Your script must send a `POST` request with the contents of a file, passed with the filename as the second argument of the script, in the body of the request
+
+[102-catch_me.sh](./102-catch_me.sh)
+
+Bash script that makes a request to `0.0.0.0:5000/catch_me` that causes the server to respond with a message containing `You got me!`, in the body of the response.
+
+Requirements:
+
+* You are not allow to use `echo`, `cat`, etc. to display the final result
