@@ -76,6 +76,12 @@ If a list is sorted in ascending order then the peak is the last element. If lis
 
 Since python's own builtin sort method implements `Timsort` algorithm to perform sort which basically is a hybrid stable sorting algorithm derived from merge sort and insertion sort, we then use the python's sort method to sort the list in descending order and get first item in list at index 0 which will serve as our peak.
 
+This has a time complexity of O(log(n))
+
+Test file: [6-main.py](./6-main.py)
+
+[6-peak.txt](./6-peak.txt) file contains time complexity of finding the peak in a list.
+
 [100-status_code.sh](./100-status_code.sh)
 
 Bash script that sends a request to a URL passed as an argument, and displays only the status code of the response.
