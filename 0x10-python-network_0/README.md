@@ -24,6 +24,8 @@ Aim of this topic was to understand the following concepts:-
 
 The following task files were used to test understanding on various concepts:-
 
+All the bash scripts use curl to perform various tasks
+
 [0-body_size.sh](./0-body_size.sh)
 
 Bash script that takes in a URL, sends a request to that URL, and displays the size of the body of the response
@@ -57,3 +59,19 @@ Requirements:
 * A variable `email` must be sent with the value `hr@holbertonschool.com`
 * A variable `subject` must be sent with the value `I will always be here for PLD`
 
+[6-peak.py](./6-peak.py)
+
+function that finds `a peak` in a list of unsorted integers.
+
+* Prototype: `def find_peak(list_of_integers):`
+* You are not allowed to import any module
+* Your algorithm must have the lowest complexity (hint: you don’t need to go through all numbers to find a peak)
+* `6-peak.py` must contain the function
+* `6-peak.txt` must contain the complexity of your algorithm: `O(log(n)), O(n), O(nlog(n)) or O(n2)`
+
+Solution details:
+
+One of the ways to find peak in a list would be to sort it, then get the largest item.  
+If a list is sorted in ascending order then the peak is the last element. If list is sorted in descending order then the peak is the first element.
+
+Since python's own builtin sort method implements `Timsort` algorithm to perform sort which basically is one of the fastest sorting algorithm, we then can sort list in descending order and get peak at first index
