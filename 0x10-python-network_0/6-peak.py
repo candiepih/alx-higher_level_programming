@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# contains function that finds a peak in a list 
+# contains function that finds a peak in a list
 # of unsorted integers.
 
 
