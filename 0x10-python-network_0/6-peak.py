@@ -4,6 +4,7 @@
 
 
 def find_peak(list_of_integers):
+    """Function finds peak of list passed in"""
     if type(list_of_integers) != list:
         return
     if len(list_of_integers) == 0:
