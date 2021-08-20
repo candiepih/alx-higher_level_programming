@@ -15,5 +15,5 @@ if __name__ == "__main__":
         if i >= 10:
             break
         sha = v.get('sha')
-        author = v.get('commit').get('author').get('name')
+        author = v.get('author').get('login')
         print("{}: {}".format(sha, author))
