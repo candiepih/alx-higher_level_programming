@@ -14,6 +14,6 @@ if __name__ == "__main__":
     for i, v in enumerate(json):
         if i >= 10:
             break
-        sha = v.get('sha')
+        sha = v.get('commit').get('tree').get('sha')
         author = v.get('commit').get('author').get('name')
-        print("{}: {}".format(sha, name))
+        print("{}: {}".format(sha, author))
