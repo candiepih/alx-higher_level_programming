@@ -8,10 +8,7 @@ if __name__ == "__main__":
     repo = argv[1]
     owner = argv[2]
     url = "https://api.github.com/repos/{}/{}/commits".format(repo, owner)
-    header = {
-        'Accept': 'application/vnd.github.v3+json'
-    }
-    res = requests.get(url, headers=header).json()
+    res = requests.get(url).json()
     for i, v in enumerate(res):
         if i >= 10:
             break
