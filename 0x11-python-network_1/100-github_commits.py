@@ -2,7 +2,6 @@
 """ script that takes 2 arguments in order to solve this challenge."""
 
 import requests
-from requests.auth import HTTPBasicAuth
 from sys import argv
 
 
