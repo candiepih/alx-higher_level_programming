@@ -13,7 +13,7 @@ if __name__ == "__main__":
     try:
         for i in range(10):
             sha = res[i].get('sha')
-            author = res[i].get('commit').get('committer').get('name')
+            author = res[i].get('commit').get('author').get('name')
             print("{}: {}".format(sha, author))
     except IndexError:
         pass
