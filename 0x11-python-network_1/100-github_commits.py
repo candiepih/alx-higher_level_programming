@@ -15,5 +15,6 @@ if __name__ == "__main__":
         if i >= 10:
             break
         sha = v.get('sha')
-        author = v.get('author').get('login')
-        print("{}: {}".format(sha, author))
+        author = v.get('author')
+        name = author.get('login')
+        print("{}: {}".format(sha, name))
