@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-""" Python script that takes your GitHub credentials
-    (username and password) and uses the GitHub API to
-    display your id
-"""
+""" script that takes 2 arguments in order to solve this challenge."""
 
 import requests
 from requests.auth import HTTPBasicAuth
@@ -15,6 +12,9 @@ if __name__ == "__main__":
     url = "https://api.github.com/repos/{}/{}/commits".format(repo, owner)
     res = requests.get(url).json()
     for i in range(0, 10):
-        sha = res[i].get('sha')
-        author = res[i].get('commit').get('author').get('name')
-        print("{}: {}".format(sha, author))
+        try:
+            sha = res[i].get('sha')
+            author = res[i].get('commit').get('author').get('name')
+            print("{}: {}".format(sha, author))
+        except IndexError:
+            pass
