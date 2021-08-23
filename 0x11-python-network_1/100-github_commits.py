@@ -8,11 +8,12 @@ if __name__ == "__main__":
     repo = argv[1]
     owner = argv[2]
     url = "https://api.github.com/repos/{}/{}/commits".format(repo, owner)
-    res = requests.get(url).json()
+    res = requests.get(url)
+    commits = res.json()
     try:
         for i in range(10):
-            sha = res[i].get('sha')
-            author = res[i].get('commit').get('author').get('name')
+            sha = commits[i].get('sha')
+            author = commits[i].get('commit').get('author').get('name')
             print("{}: {}".format(sha, author))
     except IndexError:
         pass
