@@ -17,4 +17,3 @@ if __name__ == "__main__":
             print("{}: {}".format(sha, author))
     except IndexError:
         pass
-        
