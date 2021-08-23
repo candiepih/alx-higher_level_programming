@@ -9,9 +9,11 @@ if __name__ == "__main__":
     owner = argv[2]
     url = "https://api.github.com/repos/{}/{}/commits".format(repo, owner)
     res = requests.get(url).json()
-    for i, v in enumerate(res):
-        if i >= 10:
-            break
-        sha = v.get('sha')
-        author = v.get('commit').get('author').get('name')
-        print("{}: {}".format(sha, author))
+    try:
+        for i in range(10):
+            sha = v.get('sha')
+            author = v.get('commit').get('author').get('name')
+            print("{}: {}".format(sha, author))
+    except IndexError:
+        pass
+        
