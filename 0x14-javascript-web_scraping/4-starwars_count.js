@@ -15,7 +15,7 @@ request.get(apiUrl, (err, response, body) => {
     let films = data.results;
     films = films.filter(
       film => film.characters.find(
-        item => c.match(/18/)
+        character => character.match(/18/)
       )
     );
     console.log(films.length);
