@@ -7,7 +7,6 @@
 const request = require('request');
 const process = require('process');
 const apiUrl = process.argv[2];
-// const characterUrl = 'https://swapi-api.hbtn.io/api/people/18/';
 
 request.get(apiUrl, (err, response, body) => {
   if (err === null) {
