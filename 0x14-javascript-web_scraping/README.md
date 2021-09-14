@@ -48,7 +48,7 @@ Script that prints the title of a Star Wars movie where the episode number match
 Requirements:-
 
 * The first argument is the movie ID
-* You must use the `[Star wars API](https://swapi-api.hbtn.io/)` with the endpoint `https://swapi-api.hbtn.io/api/films/:id`
+* You must use the [Star wars API](https://swapi-api.hbtn.io/) with the endpoint `https://swapi-api.hbtn.io/api/films/:id`
 * You must use the module `request`
 
 [4-starwars_count.js](./4-starwars_count.js)
@@ -57,6 +57,38 @@ Script that prints the number of movies where the character “Wedge Antilles”
 
 Requirements:-
 
-* The first argument is the API URL of the `[Star wars API](https://swapi-api.hbtn.io/)`: `https://swapi-api.hbtn.io/api/films/`
+* The first argument is the API URL of the [Star wars API](https://swapi-api.hbtn.io/): `https://swapi-api.hbtn.io/api/films/`
 * Wedge Antilles is character ID `18` - your script must use this ID for filtering the result of the API
+* You must use the module `request`
+
+[5-request_store.js](./5-request_store.js)
+
+Script that gets the contents of a webpage and stores it in a file.
+
+Requirements:-
+
+* The first argument is the URL to request
+* The second argument the file path to store the body response
+* The file must be UTF-8 encoded
+* You must use the module `request`
+
+[6-completed_tasks.js](./6-completed_tasks.js)
+
+Script that computes the number of tasks completed by user id.
+
+Requirements:-
+
+* The first argument is the API URL: https://jsonplaceholder.typicode.com/todos
+* Only print users with completed task
+* You must use the module request
+
+[100-starwars_characters.js](./100-starwars_characters.js)
+
+Script that prints all characters of a Star Wars movie:
+
+Requirements:-
+
+* The first argument is the Movie ID - example: `3` = “Return of the Jedi”
+* Display one character name by line
+* You must use the [Star wars API](https://swapi-api.hbtn.io/)
 * You must use the module `request`
