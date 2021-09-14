@@ -7,14 +7,18 @@
 const request = require('request');
 const process = require('process');
 const apiUrl = process.argv[2];
-const characterUrl = 'https://swapi-api.hbtn.io/api/people/18/';
+// const characterUrl = 'https://swapi-api.hbtn.io/api/people/18/';
 
 request.get(apiUrl, (err, response, body) => {
   if (err === null) {
     const data = JSON.parse(body);
-    const films = data.results;
-    const filmss = films.filter(film => film.characters.includes(characterUrl));
-    console.log(filmss.length);
+    let films = data.results;
+    films = films.filter(
+      film => film.characters.find(
+        item => c.match(/18/)
+      )
+    );
+    console.log(films.length);
   } else {
     console.log(err);
   }
