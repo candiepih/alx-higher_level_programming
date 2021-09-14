@@ -48,5 +48,15 @@ Script that prints the title of a Star Wars movie where the episode number match
 Requirements:-
 
 * The first argument is the movie ID
-* You must use the [Star wars API](https://swapi-api.hbtn.io/) with the endpoint https://swapi-api.hbtn.io/api/films/:id
-* You must use the module request
+* You must use the `[Star wars API](https://swapi-api.hbtn.io/)` with the endpoint `https://swapi-api.hbtn.io/api/films/:id`
+* You must use the module `request`
+
+[4-starwars_count.js](./4-starwars_count.js)
+
+Script that prints the number of movies where the character “Wedge Antilles” is present.
+
+Requirements:-
+
+* The first argument is the API URL of the `[Star wars API](https://swapi-api.hbtn.io/)`: `https://swapi-api.hbtn.io/api/films/`
+* Wedge Antilles is character ID `18` - your script must use this ID for filtering the result of the API
+* You must use the module `request`
