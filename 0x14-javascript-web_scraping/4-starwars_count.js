@@ -13,7 +13,9 @@ request.get(apiUrl, (err, response, body) => {
   if (err === null) {
     const data = JSON.parse(body);
     let films = data.results;
-    films = films.filter(film => film.characters.includes(characterUrl));
+    films = films.filter(
+      film => film.characters.includes(characterUrl)
+    );
     console.log(films.length);
   } else {
     console.log(err);
