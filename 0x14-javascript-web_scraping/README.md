@@ -92,3 +92,9 @@ Requirements:-
 * Display one character name by line
 * You must use the [Star wars API](https://swapi-api.hbtn.io/)
 * You must use the module `request`
+
+[101-starwars_characters.js](./101-starwars_characters.js)
+
+Same as [100-starwars_characters.js](./100-starwars_characters.js) but:-
+
+* Displays one character name by line in the same order of the list “characters” in the `/films/` response
