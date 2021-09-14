@@ -12,11 +12,9 @@ const characterUrl = 'https://swapi-api.hbtn.io/api/people/18/';
 request.get(apiUrl, (err, response, body) => {
   if (err === null) {
     const data = JSON.parse(body);
-    let films = data.results;
-    films = films.filter(
-      film => film.characters.includes(characterUrl)
-    );
-    console.log(films.length);
+    const films = data.results;
+    const filmss = films.filter(film => film.characters.includes(characterUrl));
+    console.log(filmss.length);
   } else {
     console.log(err);
   }
