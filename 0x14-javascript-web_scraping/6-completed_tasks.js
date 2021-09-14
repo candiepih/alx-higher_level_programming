@@ -14,6 +14,9 @@ request.get(url, (err, response, body) => {
     const completedTasksData = {};
     userIds.forEach((id) => {
       const completedTasks = data.filter(todo => todo.userId === id && todo.completed);
+      if (completedTasks.length <= 0) {
+        return;
+      }
       completedTasksData[id] = completedTasks.length;
     });
     console.log(completedTasksData);
