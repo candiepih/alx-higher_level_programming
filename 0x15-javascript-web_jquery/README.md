@@ -107,3 +107,50 @@ Requirements:
 * You must use the JQuery API
 * The translation of “hello” must be displayed in the HTML tag `DIV#hello`
 * Script must work when it is imported from the `<head>` tag
+
+[100-script.js](./100-script.js)
+
+JavaScript script that updates the text color of the `<header>` element to red (`#FF0000`)
+
+Requirements:
+
+* You must use the JQuery API
+* Script must be imported from the `<head>` tag, not at the end of the HTML
+
+[101-script.js](./101-script.js)
+
+JavaScript script that adds, removes and clears `LI` elements from a list when the user clicks
+
+Requirements:
+
+* You must use the JQuery API
+* The new element must be: `<li>Item</li>`
+* The new element must be added to `UL.my_list`
+* When the user clicks on `DIV#add_item`: a new element is added to the list
+* When the user clicks on `DIV#remove_item`: the last element is removed from the list
+* When the user clicks on `DIV#clear_list`: all elements of the list are removed
+* Script must work when it imported from the `HEAD` tag
+
+[102-script.js](./102-script.js)
+
+JavaScript script that fetches and prints how to say “Hello” depending on the language
+
+Requirements:
+
+* You must use the JQuery API
+* You should use this API service: `https://www.fourtonfish.com/hellosalut/hello/`
+* The language code will be the value entered in the tag `INPUT#language_code` (`ex: es, fr, en etc.`)
+* The translation must be fetched when the user clicks on `INPUT#btn_translate`
+* The translation of “Hello” must be displayed in the HTML tag `DIV#hello`
+* Script must work when it imported from the `HEAD` tag
+
+[103-script.js](./103-script.js)
+
+JavaScript script that fetches and prints how to say “Hello” depending on the language
+
+* You should use this API service: `https://www.fourtonfish.com/hellosalut/hello/`
+* The language code will be the value entered in the tag `INPUT#language_code` (ex: `es, fr, en etc`.)
+* The translation must be fetched when the user clicks on `INPUT#btn_translate`
+* The translation of “Hello” must be displayed in the `HTML` tag `DIV#hello`
+* You can’t use `document.querySelector` to select the `HTML` tag
+* You must use the JQuery API
