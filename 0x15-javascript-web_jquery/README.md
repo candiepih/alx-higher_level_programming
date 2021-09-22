@@ -28,8 +28,82 @@ Requirements:-
 
 [1-script.js](./1-script.js)
 
-JavaScript script that updates the text color of the `<header>` element to red (#FF0000)
+JavaScript script that updates the text color of the `<header>` element to red (`#FF0000`)
 
 Requirements:
 
 * You must use the JQuery API
+
+[2-script.js](./2-script.js)
+
+JavaScript script that updates the text color of the `<header>` element to red (`#FF0000`) when the user clicks on the tag `DIV#red_header`
+
+Requirements:
+
+* You must use the JQuery API
+
+[3-script.js](./3-script.js)
+
+JavaScript script that adds the class red to the `<header>` element when the user clicks on the tag `DIV#red_header`
+
+Requirements:
+
+* You must use the JQuery API
+
+[4-script.js](./4-script.js)
+
+JavaScript script that toggles the class of the `<header>` element when the user clicks on the tag `DIV#toggle_header`
+
+Requirements:
+
+* You must use the JQuery API
+* The `<header>` element must always have one class: red or green, never both in the same time and never empty.
+* If the current class is red, when the user click on `DIV#toggle_header`, the class must be updated to green; and the reverse.
+* You must use the JQuery API
+
+[5-script.js](./5-script.js)
+
+JavaScript script that adds a `<li>` element to a list when the user clicks on the tag `DIV#add_item`
+
+Requirements:-
+
+* The new element must be: `<li>Item</li>`
+* The new element must be added to `UL.my_list`
+* You can’t use `document.querySelector` to select the HTML tag
+* You must use the JQuery API
+
+[6-script.js](./6-script.js)
+
+JavaScript script that updates the text of the `<header>` element to New Header!!! when the user clicks on `DIV#update_header`
+
+Requirements:
+
+* You must use the JQuery API
+
+[7-script.js](./7-script.js)
+
+JavaScript script that fetches the character name from this URL: `https://swapi-api.hbtn.io/api/people/5/?format=json`
+
+Requirements:
+
+* You must use the JQuery API
+* The name must be displayed in the HTML tag `DIV#character`
+
+[8-script.js](./8-script.js)
+
+JavaScript script that fetches and lists the title for all movies by using this URL: `https://swapi-api.hbtn.io/api/films/?format=json`
+
+Requirements:
+
+* You must use the JQuery API
+* All movie titles must be list in the HTML tag `UL#list_movies`
+
+[9-script.js](./9-script.js)
+
+JavaScript script that fetches from https://fourtonfish.com/hellosalut/?lang=fr and displays the value of hello from that fetch in the HTML tag `DIV#hello`.
+
+Requirements:
+
+* You must use the JQuery API
+* The translation of “hello” must be displayed in the HTML tag `DIV#hello`
+* Script must work when it is imported from the `<head>` tag
