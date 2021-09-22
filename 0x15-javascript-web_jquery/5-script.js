@@ -3,6 +3,6 @@
  * when the user clicks on the tag DIV#add_item
  */
 $('DIV#add_item').bind('click', () => {
-  let li = $('<li></li>').text('Item');
+  const li = $('<li></li>').text('Item');
   $('UL.my_list').append(li);
 });

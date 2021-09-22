@@ -4,5 +4,5 @@
  * tag DIV#red_header:
  */
 $('DIV#red_header').bind('click', () => {
-	$('header').css('color', 'red');
+  $('header').css('color', 'red');
 });

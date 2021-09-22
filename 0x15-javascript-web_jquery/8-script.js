@@ -7,7 +7,7 @@ $.ajax({
   success: (result) => {
     const movies = result.results;
     $.each(movies, (index, movie) => {
-      let el = $('<li></li>').text(movie.title);
+      const el = $('<li></li>').text(movie.title);
       $('UL#list_movies').append(el);
     });
   }
